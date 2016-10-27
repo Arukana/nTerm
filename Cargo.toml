@@ -1,12 +1,11 @@
 [package]
-name = "terminal"
+name = "nTerm"
 version = "0.1.0"
 authors = [
   "adjivas <adjivas@users.noreply.github.com>",
-  "Jeremy PEPIN <jpepin@student.42.fr>"
 ]
 readme = "README.md"
-keywords = ["terminal", "neko", "term"]
+keywords = ["nterm", "terminal", "neko", "term"]
 license = "GPL-3.0"
 
 [[bin]]
