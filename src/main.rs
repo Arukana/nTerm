@@ -5,13 +5,18 @@ extern crate gfx_text;
 extern crate pty_proc;
 
 const FONT_PATH: &'static str = "Neko-SourceCodePro-Regular.ttf";
-const WHITE: [f32; 4] = [1.0, 1.0, 1.0, 1.0];
+const PIXEL: i32 = 1;   // Screen coordinates in pixels 
+const BACKGROUND_COLOR: [f32; 4] = [0.002, 0.0, 0.0, 0.05];     // RGBA color divide by 255
+const FOREGROUND_COLOR: [f32; 4] = [0.65, 0.16, 0.16, 1.0];     // RGBA color divide by 255
 
 use pty_proc::prelude as shell;
 
 use gfx_window_glutin as gfxw;
 use glutin::{WindowBuilder, GL_CORE, Event, ElementState, MouseButton, VirtualKeyCode};
 use gfx::Device;
+
+use std::io::Write;
+use std::str;
 
 fn main() {
 	let mut shell: shell::Shell = shell::Shell::from_mode(None, None, None, shell::Mode::Character).unwrap();
@@ -28,22 +33,32 @@ fn main() {
 
 	// In render loop:
 
+    shell.write(b"echo nya \n sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss \n\n");
 	while let Some(shell_event) = shell.next() {
 		for event in window.poll_events() {
 			match event {
 				Event::Closed => break ,
-				Event::MouseInput(ElementState::Pressed, MouseButton::Left) => break ,
-				Event::KeyboardInput(ElementState::Pressed, _, _) => break ,
 				Event::KeyboardInput(_, _, Some(VirtualKeyCode::Escape)) => break ,
 				_ => {
 					if let Some(screen) = shell_event.is_output_screen() {
 						// Add some text 10 pixels down and right from the top left screen corner.
-						text.add(
-							&format!("{}", unsafe { String::from_utf8_unchecked(screen.into_bytes()) }),
-							[10, 10],                                       // Position
-							[0.65, 0.16, 0.16, 1.0],                        // Text color
-						);
-						stream.clear(&main_color, WHITE);
+                        let display: String = unsafe {
+                            String::from_utf8_unchecked(screen.into_bytes())
+                        };
+
+                        let display: &str = display.as_str();
+                        (0..{display.len()/80}).all(|index| unsafe {
+                            let begin = index*80;
+                            let end = begin+80;
+                            let line: &str = display.slice_unchecked(begin, end);
+                            text.add(
+                                line,
+                                [10 * PIXEL, 12 * PIXEL * index as i32],    // Position
+                                FOREGROUND_COLOR,                    // Text color
+                            );
+                            true
+                        });
+						stream.clear(&main_color, BACKGROUND_COLOR);
 
 						// Draw text.
 						text.draw(&mut stream, &main_color).unwrap();
@@ -58,3 +73,4 @@ fn main() {
 		}
 	}
 }
+
