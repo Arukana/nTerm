@@ -12,7 +12,7 @@ const FOREGROUND_COLOR: [f32; 4] = [0.65, 0.16, 0.16, 1.0];     // RGBA color di
 use pty_proc::prelude as shell;
 
 use gfx_window_glutin as gfxw;
-use glutin::{WindowBuilder, GL_CORE, Event, ElementState, MouseButton, VirtualKeyCode};
+use glutin::{GL_CORE, ElementState, MouseButton, VirtualKeyCode};
 use gfx::Device;
 
 use std::io::Write;
@@ -21,10 +21,10 @@ use std::str;
 fn main() {
 	let mut shell: shell::Shell = shell::Shell::from_mode(None, None, None, shell::Mode::Character).unwrap();
 	let (window, mut device, mut factory, main_color, _) = {
-        let builder = WindowBuilder::new()
-						            .with_dimensions(840, 480)
-						            .with_title(format!("nTerm"))
-							        .with_gl(GL_CORE);
+        let builder = glutin::WindowBuilder::new()
+                                            .with_dimensions(840, 480)
+                                            .with_title(format!("nTerm"))
+                                           .with_gl(GL_CORE);
         gfxw::init::<gfx::format::Rgba8, gfx::format::Depth>(builder)
 	};
 
@@ -32,14 +32,21 @@ fn main() {
 	let mut text = gfx_text::new(factory).with_size(17).with_font(FONT_PATH).unwrap();
 
 	// In render loop:
-
-    shell.write(b"echo nya \n sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss \n\n");
-	while let Some(shell_event) = shell.next() {
+    'main: loop {
 		for event in window.poll_events() {
 			match event {
-				Event::Closed => break ,
-				Event::KeyboardInput(_, _, Some(VirtualKeyCode::Escape)) => break ,
+				glutin::Event::Closed => break 'main,
+				glutin::Event::KeyboardInput(_, _, Some(VirtualKeyCode::Escape)) => {
+                    shell.write(b"exit\n");
+                    break 'main
+                },
+				glutin::Event::ReceivedCharacter(code) => unsafe {
+                    use std::mem;
+
+                    shell.write(&mem::transmute::<char, [u8; 4]>(code));
+                },
 				_ => {
+                    let shell_event = shell.next().unwrap();
 					if let Some(screen) = shell_event.is_output_screen() {
 						// Add some text 10 pixels down and right from the top left screen corner.
                         let display: String = unsafe {
