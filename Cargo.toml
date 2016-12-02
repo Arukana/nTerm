@@ -28,12 +28,14 @@ gfx_window_glutin = "0.12"
 glutin = "0.6"
 
 [dependencies.gfx_text]
-version          = "*"
+git              = "https://github.com/bvssvni/gfx_text.git"
 default-features = false
 
-[dependencies.pty-proc]
-git              = "https://github.com/adjivas/pty-proc.git"
-branch           = "tree"
+[dependencies.itertools]
+version          = "0.5"
+
+[dependencies.neko]
+git              = "https://github.com/Arukana/Neko.git"
 
 [dependencies.clippy]
 version          = "*"

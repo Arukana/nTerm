@@ -1,30 +1,34 @@
 extern crate gfx;
 extern crate gfx_window_glutin;
-extern crate glutin;
 extern crate gfx_text;
-extern crate pty_proc;
+extern crate glutin;
+extern crate itertools;
+extern crate neko;
 
 const FONT_PATH: &'static str = "Neko-SourceCodePro-Regular.ttf";
-const PIXEL: i32 = 1;   // Screen coordinates in pixels 
 const BACKGROUND_COLOR: [f32; 4] = [0.002, 0.0, 0.0, 0.05];     // RGBA color divide by 255
 const FOREGROUND_COLOR: [f32; 4] = [0.65, 0.16, 0.16, 1.0];     // RGBA color divide by 255
 
-use pty_proc::prelude as shell;
-
-use gfx_window_glutin as gfxw;
-use glutin::{GL_CORE, ElementState, MouseButton, VirtualKeyCode};
-use gfx::Device;
-
+use std::ops::Mul;
 use std::io::Write;
 use std::str;
 
+use neko::prelude as shell;
+
+use itertools::Itertools;
+
+use gfx_window_glutin as gfxw;
+use gfx::Device;
+use glutin::{GL_CORE, ElementState, MouseButton, VirtualKeyCode};
+
 fn main() {
-	let mut shell: shell::Shell = shell::Shell::from_mode(None, None, None, shell::Mode::Character).unwrap();
+	let mut shell: shell::Neko = shell::Neko::new(None, None).unwrap();
+    let mut with: usize = shell.get_screen().get_window_size().get_col();
 	let (window, mut device, mut factory, main_color, _) = {
         let builder = glutin::WindowBuilder::new()
                                             .with_dimensions(840, 480)
                                             .with_title(format!("nTerm"))
-                                           .with_gl(GL_CORE);
+                                            .with_gl(GL_CORE);
         gfxw::init::<gfx::format::Rgba8, gfx::format::Depth>(builder)
 	};
 
@@ -47,24 +51,31 @@ fn main() {
                 },
 				_ => {
                     let shell_event = shell.next().unwrap();
+
+                    if let Some(()) = shell_event.is_signal_resized() {
+                        with = shell.get_screen().get_window_size().get_col();
+                    }
 					if let Some(screen) = shell_event.is_output_screen() {
 						// Add some text 10 pixels down and right from the top left screen corner.
-                        let display: String = unsafe {
-                            String::from_utf8_unchecked(screen.into_bytes())
-                        };
 
-                        let display: &str = display.as_str();
-                        (0..{display.len()/80}).all(|index| unsafe {
-                            let begin = index*80;
-                            let end = begin+80;
-                            let line: &str = display.slice_unchecked(begin, end);
-                            text.add(
-                                line,
-                                [10 * PIXEL, 12 * PIXEL * index as i32],    // Position
-                                FOREGROUND_COLOR,                    // Text color
-                            );
-                            true
-                        });
+                        shell.get_screen()
+                             .into_iter()
+                             .as_slice()
+                             .chunks(with)
+                             .enumerate()
+                             .foreach(|(y, line)|{
+                                  line.iter()
+                                      .enumerate()
+                                      .foreach(|(x, character)|
+                                           text.add(
+                                                character.get_unicode().to_string().as_str(),
+                                                [10.mul(x as i32), 10.mul(y as i32)],
+                                                FOREGROUND_COLOR));
+                                       text.add(
+                                            "\n",
+                                            [10.mul(line.len() as i32), 10.mul(y as i32)],
+                                            FOREGROUND_COLOR);                                    
+                                      });
 						stream.clear(&main_color, BACKGROUND_COLOR);
 
 						// Draw text.
@@ -73,8 +84,6 @@ fn main() {
 						window.swap_buffers().unwrap();
 						device.cleanup();
 					}
-
-
 				},
 			}
 		}
