@@ -14,29 +14,33 @@ test = false
 
 
 [features]
-default          = []
-lints            = ["clippy", "nightly"]
-nightly          = [] # for building with nightly and unstable features
-unstable         = [] # for building with unstable features on stable Rust
-debug            = [] # for building with debug messages
-travis           = ["lints", "nightly"] # for building with travis-cargo
+default           = []
+lints             = ["clippy", "nightly"]
+nightly           = [] # for building with nightly and unstable features
+unstable          = [] # for building with unstable features on stable Rust
+debug             = [] # for building with debug messages
+travis            = ["lints", "nightly"] # for building with travis-cargo
 
 [dependencies]
-gfx = "0.12"
-freetype-rs = "0.11"
+gfx               = "0.12"
+freetype-rs       = "0.11"
 gfx_window_glutin = "0.12"
-glutin = "0.6"
+glutin            = "0.6"
 
 [dependencies.gfx_text]
-version          = "*"
-default-features = false
+version           = "*"
+default-features  = false
 
 [dependencies.itertools]
-version          = "0.5"
+version           = "0.5"
 
 [dependencies.neko]
-git              = "https://github.com/Arukana/Neko.git"
+git               = "https://github.com/Arukana/Neko.git"
 
 [dependencies.clippy]
-version          = "*"
-optional         = true
+version           = "*"
+optional          = true
+
+[dependencies.rayon]
+git               = "https://github.com/nikomatsakis/rayon"
+version           = "*"
