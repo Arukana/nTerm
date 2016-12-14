@@ -5,6 +5,8 @@ extern crate glutin;
 extern crate itertools;
 extern crate neko;
 
+/// The sub-directory font.
+const SPEC_SUBD_NCF: &'static str = "fonts";
 const FONT_PATH: &'static str = "Neko-SourceCodePro-Regular.ttf";
 const BACKGROUND_COLOR: [f32; 4] = [1.0, 1.0, 1.0, 1.0];     // RGBA color divide by 255
 const FOREGROUND_COLOR: [f32; 4] = [0.0, 0.0, 0.0, 1.0];     // RGBA color divide by 255
@@ -16,6 +18,7 @@ use std::str;
 // Thread using
 use std::mem;
 use std::env;
+use std::path::PathBuf;
 
 use neko::prelude as shell;
 
@@ -26,8 +29,7 @@ use gfx::Device;
 use glutin::{GL_CORE, ElementState, MouseButton, VirtualKeyCode};
 
 fn main() {
-    let mut shell: shell::Neko = shell::Neko::new(None, None).unwrap();
-    // let mut shell: std::sync::Arc<shell::Neko> = Arc::new(shell::Neko::new(None, None).unwrap());
+    let mut shell: shell::Neko = shell::Neko::new(None, None).expect("neko");
     let mut with: usize = shell.get_screen().get_window_size().get_col();
     let (window, mut device, mut factory, main_color, _) = {
         let builder = glutin::WindowBuilder::new()
@@ -38,27 +40,30 @@ fn main() {
     };
 
     let mut stream: gfx::Encoder<_, _> = factory.create_command_buffer().into();
+    let repository = env::var(neko::SPEC_ROOT).expect("env");
+    let font: PathBuf = PathBuf::from(repository)
+                                .join(SPEC_SUBD_NCF)
+                                .join(FONT_PATH);
+    
 
-    let mut font: String = env::var(neko::SPEC_ROOT).unwrap();
-
-    font.push_str("fonts/Neko-SourceCodePro-Regular.ttf");
-	let mut text = gfx_text::new(factory).with_size(17).with_font(FONT_PATH).unwrap();
+	let mut text = gfx_text::new(factory).with_size(17).with_font(font.to_str().expect("font")).unwrap();
 
     // In render loop:
     loop {
+    println!("{:?}", font);
         match window.poll_events().next() {
             Some(glutin::Event::Closed) => {
                 break;
             }
             Some(glutin::Event::KeyboardInput(_, _, Some(VirtualKeyCode::Escape))) => {
-                shell.write(b"exit\n").unwrap();
+                shell.write(b"exit\n").expect("exit");
                 break;
             }
             Some(glutin::Event::ReceivedCharacter(code)) => unsafe {
-                shell.write(&mem::transmute::<char, [u8; 4]>(code)).unwrap();
+                shell.write(&mem::transmute::<char, [u8; 4]>(code)).expect("transmutation");
             },
             None => {
-                let shell_event = shell.next().unwrap();
+                let shell_event = shell.next().expect("next");
                 if let Some(()) = shell_event.is_signal_resized() {
                     with = shell.get_screen().get_window_size().get_col();
                 }
@@ -80,9 +85,9 @@ fn main() {
                     stream.clear(&main_color, BACKGROUND_COLOR);
 
                     // Draw text
-                    text.draw(&mut stream, &main_color).unwrap();
+                    text.draw(&mut stream, &main_color).expect("draw");
                     stream.flush(&mut device);
-                    window.swap_buffers().unwrap();
+                    window.swap_buffers().expect("swap");
                 }
             }
             _ => {}
