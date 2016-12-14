@@ -5,19 +5,20 @@ extern crate glutin;
 extern crate itertools;
 extern crate neko;
 
-const FONT_PATH: &'static str = "/Users/jpepin/goinfre/nTerm/Neko-SourceCodePro-Regular.ttf";
-const BACKGROUND_COLOR: [f32; 4] = [0.002, 0.0, 0.0, 0.05];     // RGBA color divide by 255
-const FOREGROUND_COLOR: [f32; 4] = [0.65, 0.16, 0.16, 1.0];     // RGBA color divide by 255
+const FONT_PATH: &'static str = "Neko-SourceCodePro-Regular.ttf";
+const BACKGROUND_COLOR: [f32; 4] = [1.0, 1.0, 1.0, 1.0];     // RGBA color divide by 255
+const FOREGROUND_COLOR: [f32; 4] = [0.0, 0.0, 0.0, 1.0];     // RGBA color divide by 255
 
 use std::ops::Mul;
 use std::io::Write;
 use std::str;
-use std::mem;
 
 // Thread using
 use std::sync::Arc;
 use std::time::Duration;
 use std::thread;
+use std::mem;
+use std::env;
 
 use neko::prelude as shell;
 use neko::pty::Character;
@@ -47,9 +48,13 @@ fn main() {
 	};
 
 	let mut stream: gfx::Encoder<_, _> = factory.create_command_buffer().into();
+
+    let mut font: String = env::var(neko::SPEC_ROOT).unwrap();
+
+    font.push_str("fonts/Neko-SourceCodePro-Regular.ttf");
 	let mut text = gfx_text::new(factory).with_size(17).with_font(FONT_PATH).unwrap();
 
-  let transfer: std::sync::Arc<([u8; 4], [Character; 9000])> = Arc::new(([0; 4], [Character::space(); 9000]));
+  let transfer: std::sync::Arc<([u8; 4], [Character; 9000])> = Arc::new(([0; 4], [Character::default(); 9000]));
 
   // In render loop:
   'main: loop
