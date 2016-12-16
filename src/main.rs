@@ -50,7 +50,6 @@ fn main() {
 
     // In render loop:
     loop {
-    println!("{:?}", font);
         match window.poll_events().next() {
             Some(glutin::Event::Closed) => {
                 break;
@@ -76,7 +75,7 @@ fn main() {
                         .enumerate()
                         .foreach(|(y, line)| {
                             line.iter().enumerate().all(|(x, &character)| {
-                                text.add(character.get_unicode().to_string().as_str(),
+                                text.add(character.get_glyph().to_string().as_str(),
                                          [8.mul(x as i32), 17.mul(y as i32)],
                                          FOREGROUND_COLOR);
                                 true

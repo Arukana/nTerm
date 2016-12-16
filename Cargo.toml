@@ -40,7 +40,3 @@ git               = "https://github.com/Arukana/Neko.git"
 [dependencies.clippy]
 version           = "*"
 optional          = true
-
-[dependencies.rayon]
-git               = "https://github.com/nikomatsakis/rayon"
-version           = "*"
