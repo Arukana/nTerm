@@ -1,0 +1,1246 @@
+The system is: Darwin - 15.6.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: ;-I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include;-DGIT_SSH;-O0;-ffunction-sections;-fdata-sections;-m64;-fPIC
+Id flags: 
+
+The output was:
+0
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is AppleClang, found in "/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/3.5.0-rc2/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_32ec4/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_32ec4.dir/build.make CMakeFiles/cmTC_32ec4.dir/build
+Building C object CMakeFiles/cmTC_32ec4.dir/testCCompiler.c.o
+/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC    -o CMakeFiles/cmTC_32ec4.dir/testCCompiler.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_32ec4
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32ec4.dir/link.txt --verbose=1
+/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_32ec4.dir/testCCompiler.c.o  -o cmTC_32ec4  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b25f9/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b25f9.dir/build.make CMakeFiles/cmTC_b25f9.dir/build
+Building C object CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC    -o CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_b25f9
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b25f9.dir/link.txt --verbose=1
+/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o  -o cmTC_b25f9   
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -o cmTC_b25f9 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o -L/Users/adjivas/Developer/graphviz/lib -L/Users/adjivas/Developer/sdl2_ttf/lib -L/Users/adjivas/Developer/freetype/lib -L/Users/adjivas/Developer/freetype/freetype-2.7/lib -L/Users/adjivas/Developer/sdl2_mixer/lib -L/Users/adjivas/Developer/sdl2_image/lib -L/Users/adjivas/Developer/sdl2/lib -L/Users/adjivas/Developer/tmux/tmux-2.1/lib -L/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib -L/Users/adjivas/Developer/clang/cfe-3.7.1/lib -L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib -L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib -L/Users/adjivas/Developer/redshift/redshift-1.11/lib -L/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib -L/Users/adjivas/Developer/python/python2.7.2/lib -L/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib -L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib -L/Users/adjivas/Developer/gettext/gettext-*/lib -L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib -L/Users/adjivas/Developer/automake/automake-1.15/lib -L/Users/adjivas/Developer/autoconf/autoconf-*/lib -L/Users/adjivas/Developer/cmake/lib -L/Users/adjivas/Developer/graphviz/lib -L/Users/adjivas/Developer/sdl2_ttf/lib -L/Users/adjivas/Developer/freetype/lib -L/Users/adjivas/Developer/freetype/freetype-2.7/lib -L/Users/adjivas/Developer/sdl2_mixer/lib -L/Users/adjivas/Developer/sdl2_image/lib -L/Users/adjivas/Developer/sdl2/lib -L/Users/adjivas/Developer/tmux/tmux-2.1/lib -L/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib -L/Users/adjivas/Developer/clang/cfe-3.7.1/lib -L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib -L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib -L/Users/adjivas/Developer/redshift/redshift-1.11/lib -L/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib -L/Users/adjivas/Developer/python/python2.7.2/lib -L/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib -L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib -L/Users/adjivas/Developer/gettext/gettext-*/lib -L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib -L/Users/adjivas/Developer/automake/automake-1.15/lib -L/Users/adjivas/Developer/autoconf/autoconf-*/lib -L/Users/adjivas/Developer/cmake/lib -L. -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-274.1
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+Library search paths:
+	/Users/adjivas/Developer/freetype/lib
+	/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib
+	/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib
+	/Users/adjivas/Developer/python/python2.7.2/lib
+	/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib
+	/Users/adjivas/Developer/freetype/lib
+	/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib
+	/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib
+	/Users/adjivas/Developer/python/python2.7.2/lib
+	/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib
+	.
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b25f9/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b25f9.dir/build.make CMakeFiles/cmTC_b25f9.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC    -o CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_b25f9]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b25f9.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o  -o cmTC_b25f9   ]
+  ignore line: [Apple LLVM version 8.0.0 (clang-800.0.42.1)]
+  ignore line: [Target: x86_64-apple-darwin15.6.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -o cmTC_b25f9 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o -L/Users/adjivas/Developer/graphviz/lib -L/Users/adjivas/Developer/sdl2_ttf/lib -L/Users/adjivas/Developer/freetype/lib -L/Users/adjivas/Developer/freetype/freetype-2.7/lib -L/Users/adjivas/Developer/sdl2_mixer/lib -L/Users/adjivas/Developer/sdl2_image/lib -L/Users/adjivas/Developer/sdl2/lib -L/Users/adjivas/Developer/tmux/tmux-2.1/lib -L/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib -L/Users/adjivas/Developer/clang/cfe-3.7.1/lib -L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib -L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib -L/Users/adjivas/Developer/redshift/redshift-1.11/lib -L/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib -L/Users/adjivas/Developer/python/python2.7.2/lib -L/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib -L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib -L/Users/adjivas/Developer/gettext/gettext-*/lib -L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib -L/Users/adjivas/Developer/automake/automake-1.15/lib -L/Users/adjivas/Developer/autoconf/autoconf-*/lib -L/Users/adjivas/Developer/cmake/lib -L/Users/adjivas/Developer/graphviz/lib -L/Users/adjivas/Developer/sdl2_ttf/lib -L/Users/adjivas/Developer/freetype/lib -L/Users/adjivas/Developer/freetype/freetype-2.7/lib -L/Users/adjivas/Developer/sdl2_mixer/lib -L/Users/adjivas/Developer/sdl2_image/lib -L/Users/adjivas/Developer/sdl2/lib -L/Users/adjivas/Developer/tmux/tmux-2.1/lib -L/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib -L/Users/adjivas/Developer/clang/cfe-3.7.1/lib -L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib -L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib -L/Users/adjivas/Developer/redshift/redshift-1.11/lib -L/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib -L/Users/adjivas/Developer/python/python2.7.2/lib -L/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib -L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib -L/Users/adjivas/Developer/gettext/gettext-*/lib -L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib -L/Users/adjivas/Developer/automake/automake-1.15/lib -L/Users/adjivas/Developer/autoconf/autoconf-*/lib -L/Users/adjivas/Developer/cmake/lib -L. -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.11.0] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_b25f9] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_b25f9.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-L/Users/adjivas/Developer/graphviz/lib] ==> dir [/Users/adjivas/Developer/graphviz/lib]
+    arg [-L/Users/adjivas/Developer/sdl2_ttf/lib] ==> dir [/Users/adjivas/Developer/sdl2_ttf/lib]
+    arg [-L/Users/adjivas/Developer/freetype/lib] ==> dir [/Users/adjivas/Developer/freetype/lib]
+    arg [-L/Users/adjivas/Developer/freetype/freetype-2.7/lib] ==> dir [/Users/adjivas/Developer/freetype/freetype-2.7/lib]
+    arg [-L/Users/adjivas/Developer/sdl2_mixer/lib] ==> dir [/Users/adjivas/Developer/sdl2_mixer/lib]
+    arg [-L/Users/adjivas/Developer/sdl2_image/lib] ==> dir [/Users/adjivas/Developer/sdl2_image/lib]
+    arg [-L/Users/adjivas/Developer/sdl2/lib] ==> dir [/Users/adjivas/Developer/sdl2/lib]
+    arg [-L/Users/adjivas/Developer/tmux/tmux-2.1/lib] ==> dir [/Users/adjivas/Developer/tmux/tmux-2.1/lib]
+    arg [-L/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib] ==> dir [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib]
+    arg [-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib] ==> dir [/Users/adjivas/Developer/clang/cfe-3.7.1/lib]
+    arg [-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib] ==> dir [/Users/adjivas/Developer/llvm/llvm-3.7.1/lib]
+    arg [-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib] ==> dir [/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib]
+    arg [-L/Users/adjivas/Developer/redshift/redshift-1.11/lib] ==> dir [/Users/adjivas/Developer/redshift/redshift-1.11/lib]
+    arg [-L/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib] ==> dir [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib]
+    arg [-L/Users/adjivas/Developer/python/python2.7.2/lib] ==> dir [/Users/adjivas/Developer/python/python2.7.2/lib]
+    arg [-L/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib] ==> dir [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib]
+    arg [-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib] ==> dir [/Users/adjivas/Developer/intltool/intltool-0.51.0/lib]
+    arg [-L/Users/adjivas/Developer/gettext/gettext-*/lib] ==> dir [/Users/adjivas/Developer/gettext/gettext-*/lib]
+    arg [-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib] ==> dir [/Users/adjivas/Developer/libtool/libtool-2.4.6/lib]
+    arg [-L/Users/adjivas/Developer/automake/automake-1.15/lib] ==> dir [/Users/adjivas/Developer/automake/automake-1.15/lib]
+    arg [-L/Users/adjivas/Developer/autoconf/autoconf-*/lib] ==> dir [/Users/adjivas/Developer/autoconf/autoconf-*/lib]
+    arg [-L/Users/adjivas/Developer/cmake/lib] ==> dir [/Users/adjivas/Developer/cmake/lib]
+    arg [-L/Users/adjivas/Developer/graphviz/lib] ==> dir [/Users/adjivas/Developer/graphviz/lib]
+    arg [-L/Users/adjivas/Developer/sdl2_ttf/lib] ==> dir [/Users/adjivas/Developer/sdl2_ttf/lib]
+    arg [-L/Users/adjivas/Developer/freetype/lib] ==> dir [/Users/adjivas/Developer/freetype/lib]
+    arg [-L/Users/adjivas/Developer/freetype/freetype-2.7/lib] ==> dir [/Users/adjivas/Developer/freetype/freetype-2.7/lib]
+    arg [-L/Users/adjivas/Developer/sdl2_mixer/lib] ==> dir [/Users/adjivas/Developer/sdl2_mixer/lib]
+    arg [-L/Users/adjivas/Developer/sdl2_image/lib] ==> dir [/Users/adjivas/Developer/sdl2_image/lib]
+    arg [-L/Users/adjivas/Developer/sdl2/lib] ==> dir [/Users/adjivas/Developer/sdl2/lib]
+    arg [-L/Users/adjivas/Developer/tmux/tmux-2.1/lib] ==> dir [/Users/adjivas/Developer/tmux/tmux-2.1/lib]
+    arg [-L/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib] ==> dir [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib]
+    arg [-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib] ==> dir [/Users/adjivas/Developer/clang/cfe-3.7.1/lib]
+    arg [-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib] ==> dir [/Users/adjivas/Developer/llvm/llvm-3.7.1/lib]
+    arg [-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib] ==> dir [/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib]
+    arg [-L/Users/adjivas/Developer/redshift/redshift-1.11/lib] ==> dir [/Users/adjivas/Developer/redshift/redshift-1.11/lib]
+    arg [-L/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib] ==> dir [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib]
+    arg [-L/Users/adjivas/Developer/python/python2.7.2/lib] ==> dir [/Users/adjivas/Developer/python/python2.7.2/lib]
+    arg [-L/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib] ==> dir [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib]
+    arg [-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib] ==> dir [/Users/adjivas/Developer/intltool/intltool-0.51.0/lib]
+    arg [-L/Users/adjivas/Developer/gettext/gettext-*/lib] ==> dir [/Users/adjivas/Developer/gettext/gettext-*/lib]
+    arg [-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib] ==> dir [/Users/adjivas/Developer/libtool/libtool-2.4.6/lib]
+    arg [-L/Users/adjivas/Developer/automake/automake-1.15/lib] ==> dir [/Users/adjivas/Developer/automake/automake-1.15/lib]
+    arg [-L/Users/adjivas/Developer/autoconf/autoconf-*/lib] ==> dir [/Users/adjivas/Developer/autoconf/autoconf-*/lib]
+    arg [-L/Users/adjivas/Developer/cmake/lib] ==> dir [/Users/adjivas/Developer/cmake/lib]
+    arg [-L.] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Users/adjivas/Developer/freetype/lib;/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib;/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib;/Users/adjivas/Developer/python/python2.7.2/lib;/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib;/Users/adjivas/Developer/freetype/lib;/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib;/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib;/Users/adjivas/Developer/python/python2.7.2/lib;/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib;.;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  collapse lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Users/adjivas/Developer/graphviz/lib] ==> [/Users/adjivas/Developer/graphviz/lib]
+  collapse library dir [/Users/adjivas/Developer/sdl2_ttf/lib] ==> [/Users/adjivas/Developer/sdl2_ttf/lib]
+  collapse library dir [/Users/adjivas/Developer/freetype/lib] ==> [/Users/adjivas/Developer/freetype/lib]
+  collapse library dir [/Users/adjivas/Developer/freetype/freetype-2.7/lib] ==> [/Users/adjivas/Developer/freetype/freetype-2.7/lib]
+  collapse library dir [/Users/adjivas/Developer/sdl2_mixer/lib] ==> [/Users/adjivas/Developer/sdl2_mixer/lib]
+  collapse library dir [/Users/adjivas/Developer/sdl2_image/lib] ==> [/Users/adjivas/Developer/sdl2_image/lib]
+  collapse library dir [/Users/adjivas/Developer/sdl2/lib] ==> [/Users/adjivas/Developer/sdl2/lib]
+  collapse library dir [/Users/adjivas/Developer/tmux/tmux-2.1/lib] ==> [/Users/adjivas/Developer/tmux/tmux-2.1/lib]
+  collapse library dir [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib] ==> [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib]
+  collapse library dir [/Users/adjivas/Developer/clang/cfe-3.7.1/lib] ==> [/Users/adjivas/Developer/clang/cfe-3.7.1/lib]
+  collapse library dir [/Users/adjivas/Developer/llvm/llvm-3.7.1/lib] ==> [/Users/adjivas/Developer/llvm/llvm-3.7.1/lib]
+  collapse library dir [/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib] ==> [/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib]
+  collapse library dir [/Users/adjivas/Developer/redshift/redshift-1.11/lib] ==> [/Users/adjivas/Developer/redshift/redshift-1.11/lib]
+  collapse library dir [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib] ==> [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib]
+  collapse library dir [/Users/adjivas/Developer/python/python2.7.2/lib] ==> [/Users/adjivas/Developer/python/python2.7.2/lib]
+  collapse library dir [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib] ==> [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib]
+  collapse library dir [/Users/adjivas/Developer/intltool/intltool-0.51.0/lib] ==> [/Users/adjivas/Developer/intltool/intltool-0.51.0/lib]
+  collapse library dir [/Users/adjivas/Developer/gettext/gettext-*/lib] ==> [/Users/adjivas/Developer/gettext/gettext-*/lib]
+  collapse library dir [/Users/adjivas/Developer/libtool/libtool-2.4.6/lib] ==> [/Users/adjivas/Developer/libtool/libtool-2.4.6/lib]
+  collapse library dir [/Users/adjivas/Developer/automake/automake-1.15/lib] ==> [/Users/adjivas/Developer/automake/automake-1.15/lib]
+  collapse library dir [/Users/adjivas/Developer/autoconf/autoconf-*/lib] ==> [/Users/adjivas/Developer/autoconf/autoconf-*/lib]
+  collapse library dir [/Users/adjivas/Developer/cmake/lib] ==> [/Users/adjivas/Developer/cmake/lib]
+  collapse library dir [/Users/adjivas/Developer/graphviz/lib] ==> [/Users/adjivas/Developer/graphviz/lib]
+  collapse library dir [/Users/adjivas/Developer/sdl2_ttf/lib] ==> [/Users/adjivas/Developer/sdl2_ttf/lib]
+  collapse library dir [/Users/adjivas/Developer/freetype/lib] ==> [/Users/adjivas/Developer/freetype/lib]
+  collapse library dir [/Users/adjivas/Developer/freetype/freetype-2.7/lib] ==> [/Users/adjivas/Developer/freetype/freetype-2.7/lib]
+  collapse library dir [/Users/adjivas/Developer/sdl2_mixer/lib] ==> [/Users/adjivas/Developer/sdl2_mixer/lib]
+  collapse library dir [/Users/adjivas/Developer/sdl2_image/lib] ==> [/Users/adjivas/Developer/sdl2_image/lib]
+  collapse library dir [/Users/adjivas/Developer/sdl2/lib] ==> [/Users/adjivas/Developer/sdl2/lib]
+  collapse library dir [/Users/adjivas/Developer/tmux/tmux-2.1/lib] ==> [/Users/adjivas/Developer/tmux/tmux-2.1/lib]
+  collapse library dir [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib] ==> [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib]
+  collapse library dir [/Users/adjivas/Developer/clang/cfe-3.7.1/lib] ==> [/Users/adjivas/Developer/clang/cfe-3.7.1/lib]
+  collapse library dir [/Users/adjivas/Developer/llvm/llvm-3.7.1/lib] ==> [/Users/adjivas/Developer/llvm/llvm-3.7.1/lib]
+  collapse library dir [/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib] ==> [/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib]
+  collapse library dir [/Users/adjivas/Developer/redshift/redshift-1.11/lib] ==> [/Users/adjivas/Developer/redshift/redshift-1.11/lib]
+  collapse library dir [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib] ==> [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib]
+  collapse library dir [/Users/adjivas/Developer/python/python2.7.2/lib] ==> [/Users/adjivas/Developer/python/python2.7.2/lib]
+  collapse library dir [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib] ==> [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib]
+  collapse library dir [/Users/adjivas/Developer/intltool/intltool-0.51.0/lib] ==> [/Users/adjivas/Developer/intltool/intltool-0.51.0/lib]
+  collapse library dir [/Users/adjivas/Developer/gettext/gettext-*/lib] ==> [/Users/adjivas/Developer/gettext/gettext-*/lib]
+  collapse library dir [/Users/adjivas/Developer/libtool/libtool-2.4.6/lib] ==> [/Users/adjivas/Developer/libtool/libtool-2.4.6/lib]
+  collapse library dir [/Users/adjivas/Developer/automake/automake-1.15/lib] ==> [/Users/adjivas/Developer/automake/automake-1.15/lib]
+  collapse library dir [/Users/adjivas/Developer/autoconf/autoconf-*/lib] ==> [/Users/adjivas/Developer/autoconf/autoconf-*/lib]
+  collapse library dir [/Users/adjivas/Developer/cmake/lib] ==> [/Users/adjivas/Developer/cmake/lib]
+  collapse library dir [/Users/adjivas/Developer/freetype/lib] ==> [/Users/adjivas/Developer/freetype/lib]
+  collapse library dir [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib] ==> [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib]
+  collapse library dir [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib] ==> [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib]
+  collapse library dir [/Users/adjivas/Developer/python/python2.7.2/lib] ==> [/Users/adjivas/Developer/python/python2.7.2/lib]
+  collapse library dir [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib] ==> [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib]
+  collapse library dir [/Users/adjivas/Developer/freetype/lib] ==> [/Users/adjivas/Developer/freetype/lib]
+  collapse library dir [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib] ==> [/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib]
+  collapse library dir [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib] ==> [/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib]
+  collapse library dir [/Users/adjivas/Developer/python/python2.7.2/lib] ==> [/Users/adjivas/Developer/python/python2.7.2/lib]
+  collapse library dir [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib] ==> [/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib]
+  collapse library dir [.] ==> [/Users/adjivas/.cargo/registry/src/github.com-1ecc6299db9ec823/libgit2-sys-0.6.5/libgit2]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/lib/darwin/libclang_rt.osx.a]
+  implicit dirs: [/Users/adjivas/Developer/graphviz/lib;/Users/adjivas/Developer/sdl2_ttf/lib;/Users/adjivas/Developer/freetype/lib;/Users/adjivas/Developer/freetype/freetype-2.7/lib;/Users/adjivas/Developer/sdl2_mixer/lib;/Users/adjivas/Developer/sdl2_image/lib;/Users/adjivas/Developer/sdl2/lib;/Users/adjivas/Developer/tmux/tmux-2.1/lib;/Users/adjivas/Developer/node/node-v4.1.2-darwin-x64/lib;/Users/adjivas/Developer/clang/cfe-3.7.1/lib;/Users/adjivas/Developer/llvm/llvm-3.7.1/lib;/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib;/Users/adjivas/Developer/redshift/redshift-1.11/lib;/Users/adjivas/Developer/libevent/libevent-2.0.22-stable/lib;/Users/adjivas/Developer/python/python2.7.2/lib;/Users/adjivas/Developer/openssl/openssl-1.0.2f/lib;/Users/adjivas/Developer/intltool/intltool-0.51.0/lib;/Users/adjivas/Developer/gettext/gettext-*/lib;/Users/adjivas/Developer/libtool/libtool-2.4.6/lib;/Users/adjivas/Developer/automake/automake-1.15/lib;/Users/adjivas/Developer/autoconf/autoconf-*/lib;/Users/adjivas/Developer/cmake/lib;/Users/adjivas/.cargo/registry/src/github.com-1ecc6299db9ec823/libgit2-sys-0.6.5/libgit2;/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aaaca/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_aaaca.dir/build.make CMakeFiles/cmTC_aaaca.dir/build
+Building C object CMakeFiles/cmTC_aaaca.dir/feature_tests.c.o
+/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC    -std=c11 -o CMakeFiles/cmTC_aaaca.dir/feature_tests.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_aaaca
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaaca.dir/link.txt --verbose=1
+/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_aaaca.dir/feature_tests.c.o  -o cmTC_aaaca  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a7845/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_a7845.dir/build.make CMakeFiles/cmTC_a7845.dir/build
+Building C object CMakeFiles/cmTC_a7845.dir/feature_tests.c.o
+/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC    -std=c99 -o CMakeFiles/cmTC_a7845.dir/feature_tests.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a7845
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7845.dir/link.txt --verbose=1
+/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_a7845.dir/feature_tests.c.o  -o cmTC_a7845  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bf037/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_bf037.dir/build.make CMakeFiles/cmTC_bf037.dir/build
+Building C object CMakeFiles/cmTC_bf037.dir/feature_tests.c.o
+/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC    -std=c90 -o CMakeFiles/cmTC_bf037.dir/feature_tests.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_bf037
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf037.dir/link.txt --verbose=1
+/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_bf037.dir/feature_tests.c.o  -o cmTC_bf037  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIMESPEC succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b472e/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b472e.dir/build.make CMakeFiles/cmTC_b472e.dir/build
+Building C object CMakeFiles/cmTC_b472e.dir/src.c.o
+/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -DHAVE_STRUCT_STAT_ST_MTIMESPEC   -o CMakeFiles/cmTC_b472e.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b472e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b472e.dir/link.txt --verbose=1
+/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -DHAVE_STRUCT_STAT_ST_MTIMESPEC -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_b472e.dir/src.c.o  -o cmTC_b472e  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+   (void)sizeof(((struct stat *)0)->st_mtimespec);
+   return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_NSEC succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_70529/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_70529.dir/build.make CMakeFiles/cmTC_70529.dir/build
+Building C object CMakeFiles/cmTC_70529.dir/src.c.o
+/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -DHAVE_STRUCT_STAT_NSEC   -o CMakeFiles/cmTC_70529.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_70529
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70529.dir/link.txt --verbose=1
+/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -DHAVE_STRUCT_STAT_NSEC -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_70529.dir/src.c.o  -o cmTC_70529  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+   (void)sizeof(((struct stat *)0)->st_mtimespec.tv_nsec);
+   return 0;
+}
+
+Determining if the function SSLCreateContext exists in the /System/Library/Frameworks/Security.framework passed with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aec3f/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_aec3f.dir/build.make CMakeFiles/cmTC_aec3f.dir/build
+Building C object CMakeFiles/cmTC_aec3f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -DCHECK_FUNCTION_EXISTS=SSLCreateContext   -o CMakeFiles/cmTC_aec3f.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aec3f
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aec3f.dir/link.txt --verbose=1
+/usr/bin/cc   -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -DCHECK_FUNCTION_EXISTS=SSLCreateContext -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_aec3f.dir/CheckFunctionExists.c.o  -o cmTC_aec3f  -L/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/Security/SecureTransport.h  -framework Security -Wl,-rpath,/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/Security/SecureTransport.h 
+ld: warning: directory not found for option '-L/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/Security/SecureTransport.h'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+
+Performing C SOURCE FILE Test IS_WDOCUMENTATION_SUPPORTED succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e0647/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_e0647.dir/build.make CMakeFiles/cmTC_e0647.dir/build
+Building C object CMakeFiles/cmTC_e0647.dir/src.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -DIS_WDOCUMENTATION_SUPPORTED   -Wdocumentation -o CMakeFiles/cmTC_e0647.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e0647
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0647.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -DIS_WDOCUMENTATION_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e0647.dir/src.c.o  -o cmTC_e0647  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WNO-MISSING-FIELD-INITIALIZERS_SUPPORTED succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_38222/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_38222.dir/build.make CMakeFiles/cmTC_38222.dir/build
+Building C object CMakeFiles/cmTC_38222.dir/src.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -DIS_WNO-MISSING-FIELD-INITIALIZERS_SUPPORTED   -Wno-missing-field-initializers -o CMakeFiles/cmTC_38222.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:329:
+<command line>:3:15: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WNO-MISSING-FIELD-INITIALIZERS_SUPPORTED 1
+              ^
+1 warning generated.
+Linking C executable cmTC_38222
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38222.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -DIS_WNO-MISSING-FIELD-INITIALIZERS_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_38222.dir/src.c.o  -o cmTC_38222  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WSTRICT-ALIASING=2_SUPPORTED succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d6681/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_d6681.dir/build.make CMakeFiles/cmTC_d6681.dir/build
+Building C object CMakeFiles/cmTC_d6681.dir/src.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -DIS_WSTRICT-ALIASING=2_SUPPORTED   -Wstrict-aliasing=2 -o CMakeFiles/cmTC_d6681.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:329:
+<command line>:3:19: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WSTRICT-ALIASING 2_SUPPORTED
+                  ^
+1 warning generated.
+Linking C executable cmTC_d6681
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6681.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -DIS_WSTRICT-ALIASING=2_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_d6681.dir/src.c.o  -o cmTC_d6681  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WSTRICT-PROTOTYPES_SUPPORTED succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_23e99/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_23e99.dir/build.make CMakeFiles/cmTC_23e99.dir/build
+Building C object CMakeFiles/cmTC_23e99.dir/src.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -DIS_WSTRICT-PROTOTYPES_SUPPORTED   -Wstrict-prototypes -o CMakeFiles/cmTC_23e99.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:329:
+<command line>:3:19: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WSTRICT-PROTOTYPES_SUPPORTED 1
+                  ^
+1 warning generated.
+Linking C executable cmTC_23e99
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23e99.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -DIS_WSTRICT-PROTOTYPES_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_23e99.dir/src.c.o  -o cmTC_23e99  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WDECLARATION-AFTER-STATEMENT_SUPPORTED succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7e512/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_7e512.dir/build.make CMakeFiles/cmTC_7e512.dir/build
+Building C object CMakeFiles/cmTC_7e512.dir/src.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -DIS_WDECLARATION-AFTER-STATEMENT_SUPPORTED   -Wdeclaration-after-statement -o CMakeFiles/cmTC_7e512.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:329:
+<command line>:3:24: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WDECLARATION-AFTER-STATEMENT_SUPPORTED 1
+                       ^
+1 warning generated.
+Linking C executable cmTC_7e512
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e512.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -DIS_WDECLARATION-AFTER-STATEMENT_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_7e512.dir/src.c.o  -o cmTC_7e512  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WNO-UNUSED-CONST-VARIABLE_SUPPORTED succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_067bb/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_067bb.dir/build.make CMakeFiles/cmTC_067bb.dir/build
+Building C object CMakeFiles/cmTC_067bb.dir/src.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -DIS_WNO-UNUSED-CONST-VARIABLE_SUPPORTED   -Wno-unused-const-variable -o CMakeFiles/cmTC_067bb.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:329:
+<command line>:3:15: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WNO-UNUSED-CONST-VARIABLE_SUPPORTED 1
+              ^
+1 warning generated.
+Linking C executable cmTC_067bb
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_067bb.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -DIS_WNO-UNUSED-CONST-VARIABLE_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_067bb.dir/src.c.o  -o cmTC_067bb  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WNO-UNUSED-FUNCTION_SUPPORTED succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_93842/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_93842.dir/build.make CMakeFiles/cmTC_93842.dir/build
+Building C object CMakeFiles/cmTC_93842.dir/src.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -DIS_WNO-UNUSED-FUNCTION_SUPPORTED   -Wno-unused-function -o CMakeFiles/cmTC_93842.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:329:
+<command line>:3:15: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WNO-UNUSED-FUNCTION_SUPPORTED 1
+              ^
+1 warning generated.
+Linking C executable cmTC_93842
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93842.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -DIS_WNO-UNUSED-FUNCTION_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_93842.dir/src.c.o  -o cmTC_93842  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test IS_WNO-DEPRECATED-DECLARATIONS_SUPPORTED succeeded with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1527d/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_1527d.dir/build.make CMakeFiles/cmTC_1527d.dir/build
+Building C object CMakeFiles/cmTC_1527d.dir/src.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -DIS_WNO-DEPRECATED-DECLARATIONS_SUPPORTED   -Wno-deprecated-declarations -o CMakeFiles/cmTC_1527d.dir/src.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/src.c
+In file included from <built-in>:329:
+<command line>:3:15: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
+#define IS_WNO-DEPRECATED-DECLARATIONS_SUPPORTED 1
+              ^
+1 warning generated.
+Linking C executable cmTC_1527d
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1527d.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -DIS_WNO-DEPRECATED-DECLARATIONS_SUPPORTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_1527d.dir/src.c.o  -o cmTC_1527d  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+Source file was:
+int main(void) { return 0; }
+Determining if the regcomp_l exist passed with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f0ebe/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_f0ebe.dir/build.make CMakeFiles/cmTC_f0ebe.dir/build
+Building C object CMakeFiles/cmTC_f0ebe.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -Wno-deprecated-declarations    -o CMakeFiles/cmTC_f0ebe.dir/CheckSymbolExists.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f0ebe
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0ebe.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -Wno-deprecated-declarations  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_f0ebe.dir/CheckSymbolExists.c.o  -o cmTC_f0ebe  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+File /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <regex.h>
+#include <xlocale.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef regcomp_l
+  return ((int*)(&regcomp_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function qsort_r exists passed with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bafdf/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_bafdf.dir/build.make CMakeFiles/cmTC_bafdf.dir/build
+Building C object CMakeFiles/cmTC_bafdf.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -Wno-deprecated-declarations -DCHECK_FUNCTION_EXISTS=qsort_r   -o CMakeFiles/cmTC_bafdf.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bafdf
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bafdf.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -Wno-deprecated-declarations -DCHECK_FUNCTION_EXISTS=qsort_r -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_bafdf.dir/CheckFunctionExists.c.o  -o cmTC_bafdf  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4f25e/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_4f25e.dir/build.make CMakeFiles/cmTC_4f25e.dir/build
+Building C object CMakeFiles/cmTC_4f25e.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -Wno-deprecated-declarations    -o CMakeFiles/cmTC_4f25e.dir/CheckIncludeFile.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4f25e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f25e.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -Wno-deprecated-declarations  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_4f25e.dir/CheckIncludeFile.c.o  -o cmTC_4f25e  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_db19e/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_db19e.dir/build.make CMakeFiles/cmTC_db19e.dir/build
+Building C object CMakeFiles/cmTC_db19e.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -Wno-deprecated-declarations    -o CMakeFiles/cmTC_db19e.dir/CheckSymbolExists.c.o   -c /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_db19e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db19e.dir/link.txt --verbose=1
+/usr/bin/cc  -D_GNU_SOURCE -Wall -Wextra  -I/Users/adjivas/Repos/nTerm/target/release/build/libssh2-sys-36e02a70608e09c5/out/include -DGIT_SSH -O0 -ffunction-sections -fdata-sections -m64 -fPIC -Wdocumentation -Wno-missing-field-initializers -Wstrict-aliasing=2 -Wstrict-prototypes -Wdeclaration-after-statement -Wno-unused-const-variable -Wno-unused-function -Wno-deprecated-declarations  -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_db19e.dir/CheckSymbolExists.c.o  -o cmTC_db19e  
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/graphviz/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_ttf/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/freetype/freetype-2.7/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_mixer/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2_image/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/sdl2/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tmux/tmux-2.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/clang/cfe-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/llvm/llvm-3.7.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/tig/tig-tig-2.1.1/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/redshift/redshift-1.11/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/intltool/intltool-0.51.0/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/gettext/gettext-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/libtool/libtool-2.4.6/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/automake/automake-1.15/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/autoconf/autoconf-*/lib'
+ld: warning: directory not found for option '-L/Users/adjivas/Developer/cmake/lib'
+
+File /Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

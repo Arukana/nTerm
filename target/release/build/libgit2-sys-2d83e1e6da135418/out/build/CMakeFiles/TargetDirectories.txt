@@ -1,0 +1,7 @@
+/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/edit_cache.dir
+/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/rebuild_cache.dir
+/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/install/local.dir
+/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/list_install_components.dir
+/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/install.dir
+/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/install/strip.dir
+/Users/adjivas/Repos/nTerm/target/release/build/libgit2-sys-2d83e1e6da135418/out/build/CMakeFiles/git2.dir

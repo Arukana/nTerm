@@ -53,11 +53,13 @@ fn main() {
         match window.poll_events().next() {
             Some(glutin::Event::Closed) => {
                 break;
-            }
-            Some(glutin::Event::KeyboardInput(_, _, Some(VirtualKeyCode::Escape))) => {
-                shell.write(b"exit\n").expect("exit");
-                break;
-            }
+            },
+            Some(glutin::Event::Focused(d)) => {
+                println!("focused {}", d);
+            },
+            Some(glutin::Event::Resized(x, y)) => {
+                println!("resize: [{}; {}]", x, y);
+            },
             Some(glutin::Event::ReceivedCharacter(code)) => unsafe {
                 shell.write(&mem::transmute::<char, [u8; 4]>(code)).expect("transmutation");
             },
@@ -88,8 +90,8 @@ fn main() {
                     stream.flush(&mut device);
                     window.swap_buffers().expect("swap");
                 }
-            }
-            _ => {}
+            },
+            _ => {},
         }
     }
     device.cleanup();
