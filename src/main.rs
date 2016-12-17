@@ -8,8 +8,13 @@ extern crate neko;
 /// The sub-directory font.
 const SPEC_SUBD_NCF: &'static str = "fonts";
 const FONT_PATH: &'static str = "Neko-SourceCodePro-Regular.ttf";
+
+
 const BACKGROUND_COLOR: [f32; 4] = [1.0, 1.0, 1.0, 1.0];     // RGBA color divide by 255
 const FOREGROUND_COLOR: [f32; 4] = [0.0, 0.0, 0.0, 1.0];     // RGBA color divide by 255
+
+const SPEC_CEIL_WIDTH: i32 = 8;
+const SPEC_CEIL_HEIGHT: i32 = 17;
 
 use std::ops::Mul;
 use std::io::Write;
@@ -33,7 +38,7 @@ fn main() {
     let mut with: usize = shell.get_screen().get_window_size().get_col();
     let (window, mut device, mut factory, main_color, _) = {
         let builder = glutin::WindowBuilder::new()
-            .with_dimensions(2000, 1000)
+            .with_dimensions(80 * SPEC_CEIL_WIDTH as u32, 25 * SPEC_CEIL_HEIGHT as u32)
             .with_title(format!("nTerm"))
             .with_gl(GL_CORE);
         gfxw::init::<gfx::format::Rgba8, gfx::format::Depth>(builder)
@@ -46,7 +51,7 @@ fn main() {
                                 .join(FONT_PATH);
     
 
-	let mut text = gfx_text::new(factory).with_size(17).with_font(font.to_str().expect("font")).unwrap();
+	let mut text = gfx_text::new(factory).with_size(SPEC_CEIL_HEIGHT as u8).with_font(font.to_str().expect("font")).unwrap();
 
     // In render loop:
     loop {
@@ -76,7 +81,7 @@ fn main() {
                         .foreach(|(y, line)| {
                             line.iter().enumerate().all(|(x, &character)| {
                                 text.add(character.get_glyph().to_string().as_str(),
-                                         [8.mul(x as i32), 17.mul(y as i32)],
+                                         [SPEC_CEIL_WIDTH.mul(x as i32), SPEC_CEIL_HEIGHT.mul(y as i32)],
                                          FOREGROUND_COLOR);
                                 true
                             });
