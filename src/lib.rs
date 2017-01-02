@@ -30,7 +30,6 @@ pub mod prelude;
 
 mod err;
 
-use std::mem;
 use std::ops::Mul;
 use std::io::Write;
 use std::path::Path;
@@ -45,11 +44,12 @@ pub use self::err::{NterminalError, Result};
 const SPEC_SUBD_NCF: &'static str = "etc/fonts";
 
 pub struct Nterminal {
-    pty: pty::Neko,
     window: PistonWindow,
     glyph: Glyphs,
-    window_size: [u32; 2],
-    font_size: u32,
+    /// The shell interface.
+    shell: pty::Neko,
+    /// The font size.
+    size: u32,
 }
 
 impl Nterminal {
@@ -58,46 +58,55 @@ impl Nterminal {
         font_size: u32,
         [window_size_width, window_size_height]: [u32; 2],
     ) -> Result<Self> {
+        println!("{:?}", pty::Winszed {
+            ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16,
+            ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
+            ws_xpixel: window_size_width as u16,
+            ws_ypixel: window_size_height as u16,
+        });
         let winszed: pty::Winszed = pty::Winszed {
             ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16,
             ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
-            ws_xpixel: 0,
-            ws_ypixel: 0,
+            ws_xpixel: window_size_width as u16,
+            ws_ypixel: window_size_height as u16,
         };
         let window: PistonWindow = 
             try!(WindowSettings::new("nTerm", [window_size_width, window_size_height])
                                 .exit_on_esc(false)
                                 .build());
+
         Ok(Nterminal {
-            pty: try!(pty::Neko::new(None, None, None, Some(winszed))),
+            shell: try!(pty::Neko::new(None, None, None, Some(winszed))),
+            size: font_size,
             glyph: try!(Glyphs::new(Path::new(env!("CARGO_MANIFEST_DIR"))
                                          .join(SPEC_SUBD_NCF)
                                          .join(font_name),
                                     window.factory.clone())),
             window: window,
-            window_size: [window_size_width, window_size_height],
-            font_size: font_size,
         })
     }
 
     pub fn draw(&mut self, event: &piston_window::Event) {
-        let font_size: usize = self.font_size as usize;
-        let width: usize = self.window_size[0].checked_div(font_size as u32).unwrap_or_default() as usize;
+        self.shell.next();
+        let font_size: usize = self.size as usize;
+        let window_size: &pty::Winszed = self.shell.get_window_size();
+        let width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize;
         let ref mut glyph = self.glyph;
-        let ref mut neko = self.pty.get_screen();
+        let ref mut neko = self.shell.get_screen();
 
         self.window.draw_2d(event, |c, g| {
-            clear([0.0, 0.0, 0.0, 1.0], g);
-             neko
+            clear([1.0, 1.0, 1.0, 1.0], g);
+               neko
                 .into_iter()
                 .as_slice()
                 .chunks(width)
                 .enumerate()
                 .foreach(|(y, line)| {
-                    line.iter().enumerate().all(|(x, &character)| {
-                        let transform = c.transform.trans(font_size.mul(&x) as f64,
-                                                          font_size.mul(&y) as f64);
-                        text::Text::new_color([0.0, 1.0, 0.0, 1.0], font_size as u32)
+                    line.iter().enumerate().all(|(x, &character): (usize, &pty::Character)| {
+                        let transform = c.transform.trans((font_size.mul(&x) as f64), (font_size.mul(&y) + font_size) as f64);
+                        let [fg_r, fg_g, rg_b] = character.get_foreground();
+                        text::Text::new_color([fg_r as f32, fg_g as f32, rg_b as f32, 1.0], font_size as u32)
+                             .round()
                              .draw(
                                   character.get_glyph().to_string().as_str(),
                                   glyph,
@@ -118,34 +127,33 @@ impl Iterator for Nterminal {
         self.window.next().and_then(|event: piston_window::Event| {
             match event {
                 Event::Render(_) => {
-                    self.pty.next().and_then(|pty_event| {
-                            self.draw(&event);
- /*                       if let Some(()) = pty_event.is_output_screen() {
-                        }*/
-                        Some(())
-                    })
+                    self.draw(&event);
+                    Some(())
                 },
-                Event::Input(Input::Press(Button::Keyboard(key))) => unsafe {
-                    self.pty.write(&mem::transmute::<u32, [u8; 4]>(key as u32)).ok().and_then(|_| Some(()))
+                Event::Input(Input::Press(Button::Keyboard(key))) => {
+//                    self.shell.write(&mem::transmute::<u32, [u8; 4]>(key as u32)).ok().and_then(|_| Some(()))
+                    Some(())
                 },
                 Event::Input(Input::Press(Button::Mouse(mouse))) => {
-                    println!("mouse: {:?}", mouse);
-                    None
+//                    println!("mouse: {:?}", mouse);
+                    Some(())
                 },
                 Event::Input(Input::Move(Motion::MouseCursor(_, _))) => {
                     Some(())
                 },
                 Event::Input(Input::Text(paste)) => {
-                    self.pty.write(paste.as_bytes()).ok().and_then(|_| Some(()))
+                    self.shell.write(paste.as_bytes()).ok().and_then(|_| Some(()))
                 },
                 Event::Input(Input::Resize(x, y)) => {
-                    self.window_size = [x, y];
-                    self.pty.set_window_size_with(
+                    let font_size: u32 = self.size;
+                    let (window_size_width, window_size_height): (u32, u32) =
+                        (x, y);
+                    self.shell.set_window_size_with(
                         &pty::Winszed {
-                            ws_col: x.checked_div(self.font_size).unwrap_or_default() as u16,
-                            ws_row: y.checked_div(self.font_size).unwrap_or_default() as u16,
-                            ws_xpixel: 0,
-                            ws_ypixel: 0,
+                            ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16,
+                            ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
+                            ws_xpixel: window_size_width as u16,
+                            ws_ypixel: window_size_height as u16,
                         }
                     );
                     Some(())

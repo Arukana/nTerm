@@ -18,12 +18,15 @@ fn main() {
     let options = clap::App::from_yaml(yaml).get_matches();
     
     let mut nterm: Nterminal = Nterminal::new(
-        options.value_of("font_name").unwrap_or_else(|| DEFAULT_FONT_NAME),
-        options.value_of("font_size").and_then(|size| size.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_FONT_SIZE),
-        [options.value_of("window_size_width").and_then(|width| width.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_WINDOW_SIZE_WIDTH),
-         options.value_of("window_size_height").and_then(|height| height.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_WINDOW_SIZE_HEIGHT)],
+        options.value_of("font-name").unwrap_or_else(|| DEFAULT_FONT_NAME),
+        options.value_of("font-size").and_then(|size| size.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_FONT_SIZE),
+        [options.value_of("window-size-width").and_then(|width| width.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_WINDOW_SIZE_WIDTH),
+         options.value_of("window-size-height").and_then(|height| height.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_WINDOW_SIZE_HEIGHT)],
     ).unwrap();
 
-    while nterm.next().is_some() {
+    loop {
+        if nterm.next().is_none() {
+            break ;
+        }
     }
 }
