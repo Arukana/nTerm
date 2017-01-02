@@ -29,6 +29,7 @@ extern crate gfx_graphics;
 pub mod prelude;
 
 mod err;
+mod key;
 
 use std::ops::Mul;
 use std::io::Write;
@@ -58,12 +59,6 @@ impl Nterminal {
         font_size: u32,
         [window_size_width, window_size_height]: [u32; 2],
     ) -> Result<Self> {
-        println!("{:?}", pty::Winszed {
-            ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16,
-            ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
-            ws_xpixel: window_size_width as u16,
-            ws_ypixel: window_size_height as u16,
-        });
         let winszed: pty::Winszed = pty::Winszed {
             ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16,
             ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
@@ -131,18 +126,20 @@ impl Iterator for Nterminal {
                     Some(())
                 },
                 Event::Input(Input::Press(Button::Keyboard(key))) => {
-//                    self.shell.write(&mem::transmute::<u32, [u8; 4]>(key as u32)).ok().and_then(|_| Some(()))
+                    let buf: [u8; 8] = key::Key::from(key).as_slice();
+
+                    self.shell.write(&buf.split_at(buf.iter().position(|c| b'\0'.eq(c)).unwrap_or_default()).0);
                     Some(())
                 },
                 Event::Input(Input::Press(Button::Mouse(mouse))) => {
-//                    println!("mouse: {:?}", mouse);
                     Some(())
                 },
                 Event::Input(Input::Move(Motion::MouseCursor(_, _))) => {
                     Some(())
                 },
                 Event::Input(Input::Text(paste)) => {
-                    self.shell.write(paste.as_bytes()).ok().and_then(|_| Some(()))
+//                    self.shell.write(paste.as_bytes()).ok().and_then(|_| Some(()))
+                    Some(())
                 },
                 Event::Input(Input::Resize(x, y)) => {
                     let font_size: u32 = self.size;
