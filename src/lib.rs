@@ -65,8 +65,9 @@ impl Nterminal {
             ws_xpixel: window_size_width as u16,
             ws_ypixel: window_size_height as u16,
         };
+        println!("{:?}", winszed);
         let window: PistonWindow = 
-            try!(WindowSettings::new("nTerm", [window_size_width, window_size_height])
+            try!(WindowSettings::new("nTerm", [winszed.get_xpixel(), winszed.get_ypixel()])
                                 .exit_on_esc(false)
                                 .build());
 
@@ -98,7 +99,7 @@ impl Nterminal {
                 .enumerate()
                 .foreach(|(y, line)| {
                     line.iter().enumerate().all(|(x, &character): (usize, &pty::Character)| {
-                        let transform = c.transform.trans((font_size.mul(&x) as f64), (font_size.mul(&y) + font_size) as f64);
+                        let transform = c.transform.trans((font_size.mul(&x) as f64/2.0), (font_size.mul(&y) + font_size) as f64);
                         let [fg_r, fg_g, rg_b] = character.get_foreground();
                         text::Text::new_color([fg_r as f32, fg_g as f32, rg_b as f32, 1.0], font_size as u32)
                              .round()
