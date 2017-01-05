@@ -1,5 +1,5 @@
 [package]
-name = "nTerm"
+name = "nterm"
 version = "0.1.0"
 authors = [
   "adjivas <adjivas@users.noreply.github.com>",
@@ -11,7 +11,6 @@ license = "GPL-3.0"
 [[bin]]
 name = "n-term"
 test = false
-
 
 [features]
 default           = []
@@ -25,7 +24,12 @@ travis            = ["lints", "nightly"] # for building with travis-cargo
 gfx               = "0.12"
 freetype-rs       = "0.11"
 gfx_window_glutin = "0.12"
+gfx_device_gl     = "0.11"
 glutin            = "0.6"
+
+[dependencies.clippy]
+version           = "*"
+optional          = true
 
 [dependencies.gfx_text]
 version           = "*"
@@ -37,6 +41,6 @@ version           = "0.5"
 [dependencies.neko]
 git               = "https://github.com/Arukana/Neko.git"
 
-[dependencies.clippy]
-version           = "*"
-optional          = true
+[dependencies.clap]
+version = "*"
+features = ["yaml", "suggestions", "color"]

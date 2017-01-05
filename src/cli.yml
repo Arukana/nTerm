@@ -1,0 +1,29 @@
+# This file describe the command line interface options
+name: nTerm
+version: "1.0"
+about: neko Terminal
+author: adjivas <adjivas@users.noreply.github.com>, brezaire <voncay@users.noreply.github.com>", flime <LinFeiLong@users.noreply.github.com>, jpepin <limaconoob@users.noreply.github.com>
+
+args:
+    - font-name:
+        help: Defines the font name.
+        short: n
+        long: font-name
+        takes_value: true
+        possible_values:
+           - Neko-SourceCodePro-Regular.ttf
+    - font-size:
+        help: Defines the font size.
+        short: s
+        long: font-size
+        takes_value: true
+    - window-size-width:
+        help: Defines the window size width.
+        short: w
+        long: window-size-width
+        takes_value: true
+    - window-size-height:
+        help: Defines the window size height.
+        short: h
+        long: window-size-height
+        takes_value: true
