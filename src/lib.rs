@@ -60,7 +60,7 @@ impl Nterminal {
         [window_size_width, window_size_height]: [u32; 2],
     ) -> Result<Self> {
         let winszed: pty::Winszed = pty::Winszed {
-            ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16,
+            ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16*2,
             ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
             ws_xpixel: window_size_width as u16,
             ws_ypixel: window_size_height as u16,
@@ -86,7 +86,7 @@ impl Nterminal {
         self.shell.next();
         let font_size: usize = self.size as usize;
         let window_size: &pty::Winszed = self.shell.get_window_size();
-        let width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize;
+        let width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize*2;
         let ref mut glyph = self.glyph;
         let ref mut neko = self.shell.get_screen();
 
@@ -148,7 +148,7 @@ impl Iterator for Nterminal {
                         (x, y);
                     self.shell.set_window_size_with(
                         &pty::Winszed {
-                            ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16,
+                            ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16*2,
                             ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
                             ws_xpixel: window_size_width as u16,
                             ws_ypixel: window_size_height as u16,
