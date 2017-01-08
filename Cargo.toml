@@ -21,11 +21,11 @@ debug             = [] # for building with debug messages
 travis            = ["lints", "nightly"] # for building with travis-cargo
 
 [dependencies]
-gfx               = "0.12"
+gfx               = "0.13"
 freetype-rs       = "0.11"
-gfx_window_glutin = "0.12"
-gfx_device_gl     = "0.11"
-glutin            = "0.6"
+gfx_window_glutin = "0.13.1"
+gfx_device_gl     = "0.12"
+glutin            = "0.7.1"
 
 [dependencies.clippy]
 version           = "*"
