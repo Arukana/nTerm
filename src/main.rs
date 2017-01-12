@@ -19,7 +19,7 @@ fn main() {
     
     let mut nterm: Nterminal = Nterminal::new(
         options.value_of("font-name").unwrap_or_else(|| DEFAULT_FONT_NAME),
-        options.value_of("font-size").and_then(|size| size.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_FONT_SIZE),
+        options.value_of("font-size").and_then(|size| size.parse::<u8>().ok()).unwrap_or_else(|| DEFAULT_FONT_SIZE as u8),
         [options.value_of("window-size-width").and_then(|width| width.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_WINDOW_SIZE_WIDTH),
          options.value_of("window-size-height").and_then(|height| height.parse::<u32>().ok()).unwrap_or_else(|| DEFAULT_WINDOW_SIZE_HEIGHT)],
     ).unwrap();

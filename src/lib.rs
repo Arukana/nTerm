@@ -50,18 +50,18 @@ pub struct Nterminal {
     /// The shell interface.
     shell: pty::Neko,
     /// The font size.
-    size: u32,
+    size: u8,
 }
 
 impl Nterminal {
     pub fn new (
         font_name: &str,
-        font_size: u32,
+        font_size: u8,
         [window_size_width, window_size_height]: [u32; 2],
     ) -> Result<Self> {
         let winszed: pty::Winszed = pty::Winszed {
-            ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16*2,
-            ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
+            ws_col: window_size_width.checked_div(font_size as u32).unwrap_or_default() as u16*2,
+            ws_row: window_size_height.checked_div(font_size as u32).unwrap_or_default() as u16,
             ws_xpixel: window_size_width as u16,
             ws_ypixel: window_size_height as u16,
         };
@@ -88,30 +88,33 @@ impl Nterminal {
         let window_size: &pty::Winszed = self.shell.get_window_size();
         let width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize*2;
         let ref mut glyph = self.glyph;
-        let ref mut neko = self.shell.get_screen();
+        let (ref pty_screen, ref screen): (&pty::PtyDisplay, &pty::Display) = self.shell.get_screen();
 
         self.window.draw_2d(event, |c, g| {
             clear([1.0, 1.0, 1.0, 1.0], g);
-               neko
-                .into_iter()
-                .as_slice()
-                .chunks(width)
-                .enumerate()
-                .foreach(|(y, line)| {
-                    line.iter().enumerate().all(|(x, &character): (usize, &pty::Character)| {
-                        let transform = c.transform.trans((font_size.mul(&x) as f64/2.0), (font_size.mul(&y) + font_size) as f64);
-                        let [fg_r, fg_g, rg_b] = character.get_foreground();
-                        text::Text::new_color([fg_r as f32, fg_g as f32, rg_b as f32, 1.0], font_size as u32)
-                             .round()
-                             .draw(
-                                  character.get_glyph().to_string().as_str(),
-                                  glyph,
-                                  &c.draw_state,
-                                  transform, g
-                             );
-                        true
+                    pty_screen.into_iter()
+                    .zip(screen.into_iter())
+                    .collect::<Vec<(&pty::Character, pty::Character)>>()
+                    .as_slice()
+                    .chunks(width)
+                    .enumerate()
+                    .foreach(|(y, line): (usize, &[(&pty::Character, pty::Character)])| {
+                             line.into_iter().enumerate().foreach(|(x, &(&pty_character, character))| {
+                                 let (ref character, [fg_r, fg_g, rg_b]) = if pty_character.is_space() {
+                                    (character.get_glyph().to_string(), character.get_foreground())
+                                 } else {
+                                     (pty_character.get_glyph().to_string(), pty_character.get_foreground())
+                                 };
+                                 let transform = c.transform.trans((font_size.mul(&x) as f64/2.0), (font_size.mul(&y) + font_size) as f64);
+                                 text::Text::new_color([fg_r as f32, fg_g as f32, rg_b as f32, 1.0], font_size as u32)
+                                      .draw(
+                                           character,
+                                           glyph,
+                                           &c.draw_state,
+                                           transform, g
+                                      );
+                             });
                     });
-                });
         });
     }
 }
@@ -143,7 +146,7 @@ impl Iterator for Nterminal {
                     Some(())
                 },
                 Event::Input(Input::Resize(x, y)) => {
-                    let font_size: u32 = self.size;
+                    let font_size: u32 = self.size as u32;
                     let (window_size_width, window_size_height): (u32, u32) =
                         (x, y);
                     self.shell.set_window_size_with(
