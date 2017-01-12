@@ -107,33 +107,39 @@ impl Nterminal {
 
 
     pub fn draw(&mut self) {
-        let font_size: usize = self.font_size as usize;
-        let shell_event = self.shell.next().expect("next");
-        let window_size: &pty::Winszed = self.shell.get_window_size();
-        let width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize*2;
-        let ref mut text = self.text;
+        if let Some(shell_event) = self.shell.next() {
+            let font_size: usize = self.font_size as usize;
+            let window_size: &pty::Winszed = self.shell.get_window_size();
+            let width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize*2;
+            let ref mut text = self.text;
 
-        if let Some(()) = shell_event.is_output_screen() {
-            self.shell.get_screen()
-                .into_iter()
-                .as_slice()
-                .chunks(width)
-                .enumerate()
-                .foreach(|(y, line)| {
-                         line.iter().enumerate().all(|(x, &character)| {
-                             let [fg_r, fg_g, rg_b] = character.get_foreground();
-                             text.add(character.get_glyph().to_string().as_str(),
-                                      [font_size.mul(&x) as i32/2,
-                                       font_size.mul(&y) as i32],
-                                      [fg_r as f32, fg_g as f32, rg_b as f32, 1.0]
-                             );
-                             true
-                         });
-                });
-            self.stream.clear(&self.main_color, [1.0; 4]);
-            text.draw(&mut self.stream, &self.main_color).expect("draw");
-            self.stream.flush(&mut self.device);
-            self.window.swap_buffers().expect("swap");
+            if let Some(()) = shell_event.is_output_screen() {
+                let (pty_screen, screen): (&pty::PtyDisplay, &pty::Display) = self.shell.get_screen();
+                    pty_screen.into_iter()
+                    .zip(screen.into_iter())
+                    .collect::<Vec<(&pty::Character, pty::Character)>>()
+                    .as_slice()
+                    .chunks(width)
+                    .enumerate()
+                    .foreach(|(y, line): (usize, &[(&pty::Character, pty::Character)])| {
+                             line.into_iter().enumerate().foreach(|(x, &(&pty_character, character))| {
+                                 let (ref glyph, [fg_r, fg_g, rg_b]) = if pty_character.is_space() {
+                                    (character.get_glyph().to_string(), character.get_foreground())
+                                 } else {
+                                     (pty_character.get_glyph().to_string(), pty_character.get_foreground())
+                                 };
+                                 text.add(glyph,
+                                          [font_size.mul(&x) as i32/2,
+                                           font_size.mul(&y) as i32],
+                                          [fg_r as f32, fg_g as f32, rg_b as f32, 1.0]
+                                 );
+                             });
+                    });
+                self.stream.clear(&self.main_color, [1.0; 4]);
+                text.draw(&mut self.stream, &self.main_color).expect("draw");
+                self.stream.flush(&mut self.device);
+                self.window.swap_buffers().expect("swap");
+            }
         }
     }
 }
