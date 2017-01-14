@@ -48,7 +48,7 @@ use glutin::{GL_CORE, VirtualKeyCode};
 pub use self::err::{NterminalError, Result};
 
 /// The sub-directory font.
-const SPEC_SUBD_NCF: &'static str = "etc/fonts";
+const SPEC_SUBD_NCF: &'static str = "assets/fonts";
 
 pub struct Nterminal {
     window: glutin::Window,
