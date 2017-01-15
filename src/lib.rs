@@ -31,10 +31,9 @@ pub mod prelude;
 mod err;
 mod key;
 
-use std::ops::{Not, Mul};
+use std::ops::Mul;
 use std::io::Write;
 use std::path::Path;
-use std::mem;
 use std::str;
 
 pub use neko::prelude as pty;
@@ -94,37 +93,29 @@ impl Nterminal {
 
         self.window.draw_2d(event, |c, g| {
             clear([1.0, 1.0, 1.0, 1.0], g);
-                    pty_screen.into_iter()
+                pty_screen.into_iter()
                     .zip(screen.into_iter())
                     .collect::<Vec<(&pty::Character, pty::Character)>>()
                     .as_slice()
                     .chunks(width)
                     .enumerate()
                     .foreach(|(y, line): (usize, &[(&pty::Character, pty::Character)])| {
-                             line.into_iter().enumerate().foreach(|(x, &(&pty_character, character))| unsafe {
-                                     let transform = c.transform.trans((font_size.mul(&x) as f64/2.0), (font_size.mul(&y) + font_size) as f64);
-                                     let [fg_r, fg_g, rg_b] = character.get_foreground();
-                                     if character.is_space().not() {
-                                        let slice: [u8; 4] = mem::transmute::<char, [u8; 4]>(character.get_glyph());
-                                        text::Text::new_color([fg_r as f32, fg_g as f32, rg_b as f32, 1.0], font_size as u32)
-                                             .draw(
-                                                  &str::from_utf8_unchecked(&slice),
-                                                  glyph,
-                                                  &c.draw_state,
-                                                  transform, g
-                                             );
-                                     } else if pty_character.is_space().not() {
-                                         let slice: [u8; 4] = mem::transmute::<char, [u8; 4]>(pty_character.get_glyph());
-                                         text::Text::new_color([fg_r as f32, fg_g as f32, rg_b as f32, 1.0], font_size as u32)
-                                              .draw(
-                                                   &str::from_utf8_unchecked(&slice),
-                                                   glyph,
-                                                   &c.draw_state,
-                                                   transform, g
-                                              );
-                                     }
+                             line.into_iter().enumerate().foreach(|(x, &(&pty_character, character))| {
+                                 let (ref character, [fg_r, fg_g, rg_b]) = if character.get_glyph().eq(&'\0') {
+                                     (pty_character.get_glyph().to_string(), pty_character.get_foreground())
+                                 } else {
+                                    (character.get_glyph().to_string(), character.get_foreground())
+                                 };
+                                 let transform = c.transform.trans((font_size.mul(&x) as f64/2.0), (font_size.mul(&y) + font_size) as f64);
+                                 text::Text::new_color([fg_r as f32, fg_g as f32, rg_b as f32, 1.0], font_size as u32)
+                                      .draw(
+                                           character,
+                                           glyph,
+                                           &c.draw_state,
+                                           transform, g
+                                      );
                              });
-                    });
+                });
         });
     }
 }
