@@ -66,7 +66,6 @@ impl Nterminal {
             ws_xpixel: window_size_width as u16,
             ws_ypixel: window_size_height as u16,
         };
-        println!("{:?}", winszed);
         let window: PistonWindow = 
             try!(WindowSettings::new("nTerm", [winszed.get_xpixel(), winszed.get_ypixel()])
                                 .exit_on_esc(false)
@@ -101,7 +100,7 @@ impl Nterminal {
                     .enumerate()
                     .foreach(|(y, line): (usize, &[(&pty::Character, pty::Character)])| {
                              line.into_iter().enumerate().foreach(|(x, &(&pty_character, character))| {
-                                 let (ref character, [fg_r, fg_g, rg_b]) = if character.get_glyph().eq(&'\0') {
+                                 let (ref character, [fg_r, fg_g, rg_b]) = if character.is_null() {
                                      (pty_character.get_glyph().to_string(), pty_character.get_foreground())
                                  } else {
                                     (character.get_glyph().to_string(), character.get_foreground())
