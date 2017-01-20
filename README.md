@@ -1,5 +1,6 @@
 # N-Term for NEKO-Terminal!
 
+![Screen Shot](https://raw.githubusercontent.com/Arukana/book/master/images/nterm.png)
 
 Set your *Neko Path* environment variable.
 ```shell
