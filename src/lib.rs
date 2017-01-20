@@ -160,6 +160,19 @@ impl Iterator for Nterminal {
                 self.shell.write(&mem::transmute::<char, [u8; 4]>(code)).expect("transmutation");
                 Some(())
             },
+            Some(glutin::Event::Resized(x, y)) => {
+                let font_size: u32 = self.font_size as u32;
+                let (window_size_width, window_size_height): (u32, u32) = (x, y);
+                self.shell.set_window_size_with(
+                    &pty::Winszed {
+                        ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16*2,
+                        ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
+                        ws_xpixel: window_size_width as u16,
+                        ws_ypixel: window_size_height as u16,
+                    }
+                );
+                Some(())
+            },
             None => {
                 self.draw();
                 Some(())
