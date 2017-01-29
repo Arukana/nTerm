@@ -48,7 +48,10 @@ use glutin::{GL_CORE, VirtualKeyCode};
 pub use self::err::{NterminalError, Result};
 
 /// The sub-directory font.
-const SPEC_SUBD_NCF: &'static str = "assets/fonts";
+const SPEC_SUBD_NCF: &'static str = "fonts";
+/// The first directory.
+pub const SPEC_ROOT: &'static str = "NEKO_PATH";
+pub const SPEC_ROOT_DEFAULT: &'static str = "assets";
 
 pub struct Nterminal {
     window: glutin::Window,
@@ -87,9 +90,12 @@ impl Nterminal {
             gfxw::init::<gfx::format::Rgba8, gfx::format::Depth>(builder)
         };
         let stream: gfx::Encoder<gfx_device_gl::Resources, gfx_device_gl::CommandBuffer> = factory.create_command_buffer().into();
-        let font: PathBuf = PathBuf::from(
-                env::var(neko::SPEC_ROOT).ok().unwrap_or_else(|| env!("CARGO_MANIFEST_DIR").to_string())
-            )
+        let font: PathBuf =
+            env::var(SPEC_ROOT).ok()
+            .and_then(|repertory: String|
+                      Some(PathBuf::from(repertory)))
+            .unwrap_or_else(|| PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+                            .join(SPEC_ROOT_DEFAULT))
             .join(SPEC_SUBD_NCF)
             .join(font_name);
         let text = gfx_text::new(factory).with_size(font_size).with_font(font.to_str().expect("font")).unwrap();

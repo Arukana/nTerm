@@ -233,7 +233,7 @@ dependencies = [
 [[package]]
 name = "editeur"
 version = "0.1.0"
-source = "git+https://github.com/Arukana/Editor.git#21f939ea9cbd09a178066eb81e89f819083609e5"
+source = "git+https://github.com/Arukana/Editor.git#4d5207b8035ea7a95d937099a5ee794d0f004ba2"
 dependencies = [
  "termion 1.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "time 0.1.36 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -569,7 +569,7 @@ dependencies = [
 [[package]]
 name = "neko"
 version = "0.1.0"
-source = "git+https://github.com/Arukana/Neko.git#bb2c7a0244f7efe5d293e0be0b2d69a297a66424"
+source = "git+https://github.com/Arukana/Neko.git#205de0d63aca25e4565bcfc1b3f2e31f69ec5b08"
 dependencies = [
  "clap 2.19.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "editeur 0.1.0 (git+https://github.com/Arukana/Editor.git)",
