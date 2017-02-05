@@ -46,6 +46,9 @@ optional          = true
 version           = "*"
 default-features  = false
 
+[dependencies.libc]
+version           = "0.2"
+
 [dependencies.itertools]
 version           = "0.5"
 

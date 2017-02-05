@@ -19,6 +19,7 @@
 )]
 
 extern crate neko;
+extern crate libc;
 extern crate itertools;
 extern crate gfx;
 extern crate gfx_window_glutin;
@@ -30,12 +31,15 @@ extern crate glutin;
 pub mod prelude;
 
 mod err;
+mod state;
 
 use std::io::Write;
 use std::path::PathBuf;
 use std::ops::Mul;
 use std::mem;
 use std::env;
+use std::thread;
+use std::sync::mpsc;
 
 pub use neko::prelude as pty;
 
@@ -46,6 +50,7 @@ use gfx::Device;
 use glutin::{GL_CORE, VirtualKeyCode};
 
 pub use self::err::{NterminalError, Result};
+pub use self::state::{NterminalState, Display};
 
 /// The sub-directory font.
 const SPEC_SUBD_NCF: &'static str = "fonts";
@@ -62,8 +67,9 @@ pub struct Nterminal {
         gfx_device_gl::Resources,
         (gfx::format::R8_G8_B8_A8, gfx::format::Unorm)
     >,
-    /// The shell interface.
-    shell: pty::Neko,
+    speudo: pty::Master,
+    receive: mpsc::Receiver<NterminalState>,
+    state: NterminalState,
     /// The font size.
     font_size: u8,
 }
@@ -81,7 +87,27 @@ impl Nterminal {
             ws_xpixel: window_size_width as u16,
             ws_ypixel: window_size_height as u16,
         };
-        let shell: pty::Neko = pty::Neko::new(None, None, None, Some(winszed)).expect("neko");
+
+        let (tx, rx) = mpsc::sync_channel::<NterminalState>(0);
+        thread::spawn(move || {
+            let mut shell: pty::Neko =
+                pty::Neko::new(None, None, None, Some(winszed)).expect("neko");
+            /// Send a copy of master interface to write on the process' child.
+            let _ = tx.send(NterminalState::Master(*shell.get_speudo()));
+            let window_size: pty::Winszed = *shell.get_window_size();
+            let width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize*2;
+
+            while let Some(event) = shell.next() {
+                if event.is_output_screen().is_some() {
+                    let (pty_screen, screen): (&pty::PtyDisplay, &pty::Display) =
+                        shell.get_screen();
+                    let _ = tx.send(NterminalState::Display(Display::from((width, pty_screen.into_iter().cloned().into_iter()
+                      .zip(screen.into_iter())
+                      .collect::<Vec<(pty::Character, pty::Character)>>())))
+                    );
+                }
+            }
+        });
         let (window, device, mut factory, main_color, _) = {
             let builder = glutin::WindowBuilder::new()
                 .with_dimensions(window_size_width, window_size_height)
@@ -99,54 +125,63 @@ impl Nterminal {
             .join(SPEC_SUBD_NCF)
             .join(font_name);
         let text = gfx_text::new(factory).with_size(font_size).with_font(font.to_str().expect("font")).unwrap();
-    
-        Ok(Nterminal {
-            window: window,
-            device: device,
-            stream: stream,
-            text: text,
-            main_color: main_color,
-            shell: shell,
-            font_size: font_size,
-        })
+        
+        if let Ok(NterminalState::Master(speudo)) = rx.recv() {
+            Ok(Nterminal {
+                window: window,
+                device: device,
+                stream: stream,
+                text: text,
+                main_color: main_color,
+                font_size: font_size,
+                speudo: speudo,
+                state: NterminalState::Master(speudo),
+                receive: rx,
+            })
+        } else {
+            unimplemented!()
+        }
     }
 
 
     pub fn draw(&mut self) {
-        if let Some(shell_event) = self.shell.next() {
-            let font_size: usize = self.font_size as usize;
-            let window_size: &pty::Winszed = self.shell.get_window_size();
-            let width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize*2;
-            let ref mut text = self.text;
+        let ref mut text = self.text;
+        let font_size: usize = self.font_size as usize;
 
-            if let Some(()) = shell_event.is_output_screen() {
-                let (pty_screen, screen): (&pty::PtyDisplay, &pty::Display) = self.shell.get_screen();
-                    pty_screen.into_iter()
-                    .zip(screen.into_iter())
-                    .collect::<Vec<(&pty::Character, pty::Character)>>()
-                    .as_slice()
-                    .chunks(width)
-                    .enumerate()
-                    .foreach(|(y, line): (usize, &[(&pty::Character, pty::Character)])| {
-                             line.into_iter().enumerate().foreach(|(x, &(&pty_character, character))| {
-                                 let (ref glyph, [fg_r, fg_g, rg_b]) = if pty_character.is_space() {
-                                    (character.get_glyph().to_string(), character.get_foreground())
-                                 } else {
-                                     (pty_character.get_glyph().to_string(), pty_character.get_foreground())
-                                 };
-                                 text.add(glyph,
-                                          [font_size.mul(&x) as i32/2,
-                                           font_size.mul(&y) as i32],
-                                          [fg_r as f32, fg_g as f32, rg_b as f32, 1.0]
-                                 );
-                             });
-                    });
-                self.stream.clear(&self.main_color, [1.0; 4]);
-                text.draw(&mut self.stream, &self.main_color).expect("draw");
-                self.stream.flush(&mut self.device);
-                self.window.swap_buffers().expect("swap");
-            }
+        if let Ok(state) = self.receive.try_recv() {
+            self.state = state;
         }
+        if let NterminalState::Display(ref screen) = self.state {
+            screen.into_iter()
+                  .enumerate()
+                  .foreach(|(y, line):
+                            (usize, &[(pty::Character, pty::Character)])| {
+                       line.into_iter()
+                           .enumerate()
+                           .foreach(|(x, &(pty_character, character))| {
+                               let (ref glyph, [fg_r, fg_g, rg_b]) =
+                                   if pty_character.is_space() {
+                                       (character.get_glyph().to_string(),
+                                        character.get_foreground())
+                                   } else {
+                                       (pty_character.get_glyph().to_string(),
+                                        pty_character.get_foreground())
+                                   };
+                               text.add(glyph,
+                                        [font_size.mul(&x) as i32/2,
+                                         font_size.mul(&y) as i32],
+                                        [fg_r as f32,
+                                         fg_g as f32,
+                                         rg_b as f32,
+                                         1.0]
+                               );
+                           });
+                  });
+        }
+        self.stream.clear(&self.main_color, [1.0; 4]);
+        text.draw(&mut self.stream, &self.main_color).expect("draw");
+        self.stream.flush(&mut self.device);
+        self.window.swap_buffers().expect("swap");
     }
 }
 
@@ -159,14 +194,14 @@ impl Iterator for Nterminal {
                 None
             },
             Some(glutin::Event::KeyboardInput(_, _, Some(VirtualKeyCode::Escape))) => {
-                self.shell.write(b"exit\n").expect("exit");
+                self.speudo.write(b"exit\n").expect("exit");
                 Some(())
             },
             Some(glutin::Event::ReceivedCharacter(code)) => unsafe {
-                self.shell.write(&mem::transmute::<char, [u8; 4]>(code)).expect("transmutation");
+                self.speudo.write(&mem::transmute::<char, [u8; 4]>(code)).expect("transmutation");
                 Some(())
             },
-            Some(glutin::Event::Resized(x, y)) => {
+            /*Some(glutin::Event::Resized(x, y)) => {
                 let font_size: u32 = self.font_size as u32;
                 let (window_size_width, window_size_height): (u32, u32) = (x, y);
                 self.shell.set_window_size_with(
@@ -178,7 +213,7 @@ impl Iterator for Nterminal {
                     }
                 );
                 Some(())
-            },
+            },*/
             None => {
                 self.draw();
                 Some(())
