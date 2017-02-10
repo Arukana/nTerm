@@ -16,6 +16,7 @@
 *.rs.swp
 *.swp
 *.swo
+*.swn
 
 # Temp files
 .*~

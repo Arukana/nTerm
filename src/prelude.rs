@@ -1,2 +1,2 @@
 pub use ::pty::{Neko, NekoError};
-pub use ::{Nterminal, NterminalError};
+pub use ::{Nterminal, NterminalError, Display};

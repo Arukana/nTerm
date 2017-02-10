@@ -10,5 +10,7 @@ export NEKO_PATH="$HOME/.neko"
 How to build:
 ```shell
 git clone https://github.com/Arukana/nTerm.git
+git submodule init
+git submodule update
 cargo build
 ```
