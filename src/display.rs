@@ -10,6 +10,10 @@ impl Display {
     pub fn get_width(&self) -> usize {
         self.width
     }
+
+    pub fn is_null(&self) -> bool {
+        self.width.eq(&0)
+    }
 }
 
 impl From<Vec<(pty::Character, pty::Character)>> for Display {
@@ -29,7 +33,6 @@ impl From<(usize, Vec<(pty::Character, pty::Character)>)> for Display {
         }
     }
 }
-
 
 impl<'a> IntoIterator for &'a Display {
     type Item = &'a [(pty::Character, pty::Character)];

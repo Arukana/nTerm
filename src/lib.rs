@@ -48,7 +48,7 @@ use itertools::Itertools;
 
 use gfx_window_glutin as gfxw;
 use gfx::Device;
-use glutin::{GL_CORE, VirtualKeyCode};
+use glutin::GL_CORE;
 
 pub use self::display::Display;
 pub use self::err::{NterminalError, Result};
@@ -125,12 +125,15 @@ impl Nterminal {
     }
 
 
-    pub fn draw(&mut self) {
+    pub fn draw(&mut self) -> Option<()> {
         let ref mut text = self.text;
         let font_size: usize = self.font_size as usize;
 
         if let Ok(screen) = self.receive.try_recv() {
             self.screen = screen;
+            if self.screen.is_null() {
+                return None;
+            }
         }
         let ref screen = self.screen;
         screen.into_iter()
@@ -162,6 +165,7 @@ impl Nterminal {
         text.draw(&mut self.stream, &self.main_color).expect("draw");
         self.stream.flush(&mut self.device);
         self.window.swap_buffers().expect("swap");
+        Some(())
     }
 }
 
@@ -190,10 +194,7 @@ impl Iterator for Nterminal {
                 );
                 Some(())
             },
-            None => {
-                self.draw();
-                Some(())
-            },
+            None => self.draw(),
             _ => Some(()),
         }
     }

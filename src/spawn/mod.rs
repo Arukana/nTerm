@@ -31,4 +31,5 @@ pub fn neko(
             );
         }
     }
+    let _ = tx_display.send(Display::default());
 }
