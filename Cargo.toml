@@ -22,9 +22,6 @@ travis            = ["lints", "nightly"] # for building with travis-cargo
 version = "*"
 optional = true
 
-[dependencies.itertools]
-version = "0.5"
-
 [dependencies.neko]
 git = "https://github.com/Arukana/Neko.git"
 
@@ -39,6 +36,12 @@ version = "0.12"
 
 [dependencies.piston2d-gfx_graphics]
 version = "0.35"
+
+[dependencies.itertools]
+version = "0.5"
+
+[dependencies.libc]
+version = "0.2"
 
 [dependencies.clap]
 version = "*"
