@@ -173,10 +173,6 @@ impl Iterator for Nterminal {
             Some(glutin::Event::Closed) => {
                 None
             },
-            Some(glutin::Event::KeyboardInput(_, _, Some(VirtualKeyCode::Escape))) => {
-                self.speudo.write(b"exit\n").expect("exit");
-                Some(())
-            },
             Some(glutin::Event::ReceivedCharacter(code)) => unsafe {
                 self.speudo.write(&mem::transmute::<char, [u8; 4]>(code)).expect("transmutation");
                 Some(())
