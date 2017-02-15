@@ -181,10 +181,10 @@ impl Iterator for Nterminal {
                 self.speudo.write(&mem::transmute::<char, [u8; 4]>(code)).expect("transmutation");
                 Some(())
             },
-            /*Some(glutin::Event::Resized(x, y)) => {
+            Some(glutin::Event::Resized(x, y)) => unsafe {
                 let font_size: u32 = self.font_size as u32;
                 let (window_size_width, window_size_height): (u32, u32) = (x, y);
-                self.shell.set_window_size_with(
+                libc::ioctl(libc::STDIN_FILENO, libc::TIOCSWINSZ,
                     &pty::Winszed {
                         ws_col: window_size_width.checked_div(font_size).unwrap_or_default() as u16*2,
                         ws_row: window_size_height.checked_div(font_size).unwrap_or_default() as u16,
@@ -193,7 +193,7 @@ impl Iterator for Nterminal {
                     }
                 );
                 Some(())
-            },*/
+            },
             None => {
                 self.draw();
                 Some(())
