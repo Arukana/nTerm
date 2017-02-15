@@ -96,13 +96,16 @@ impl Nterminal {
         })
     }
 
-    pub fn draw(&mut self, event: &piston_window::Event) {
+    pub fn draw(&mut self, event: &piston_window::Event) -> Option<()> {
         let ref mut text = self.text;
         let font_size: usize = self.size as usize;
 
 
         if let Ok(screen) = self.receive.try_recv() {
             self.screen = screen;
+            if self.screen.is_null() {
+                return None;
+            }
         }
         let ref screen = self.screen;
         self.window.draw_2d(event, |c, g| {
@@ -129,6 +132,7 @@ impl Nterminal {
                              });
                 });
         });
+        Some(())
     }
 }
 
@@ -138,10 +142,7 @@ impl Iterator for Nterminal {
     fn next(&mut self) -> Option<()> {
         self.window.next().and_then(|event: piston_window::Event| {
             match event {
-                Event::Render(_) => {
-                    self.draw(&event);
-                    Some(())
-                },
+                Event::Input(Input::Close) => None,
                 Event::Input(Input::Press(Button::Keyboard(code))) => unsafe {
                     self.speudo.write(&mem::transmute::<piston_window::Key, [u8; 4]>(code)).expect("transmutation");
                     Some(())
@@ -170,10 +171,7 @@ impl Iterator for Nterminal {
                     );
                     Some(())
                 },
-                Event::Input(Input::Close) => {
-                    self.speudo.write(b"exit\n").expect("exit");
-                    None
-                },
+                Event::Render(_) => self.draw(&event),
                 _ => Some(()),
             }
         })
