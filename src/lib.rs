@@ -110,7 +110,9 @@ impl Nterminal {
             .join(SPEC_SUBD_NCF)
             .join(font_name);
         let text = gfx_text::new(factory).with_size(font_size).with_font(font.to_str().expect("font")).unwrap();
-        
+        unsafe {
+            libc::write(0, b"ss".as_ptr() as *const libc::c_void, 2);
+        }
         Ok(Nterminal {
             window: window,
             device: device,

@@ -1,4 +1,5 @@
 use ::pty;
+use ::pty::Parent;
 use std::sync::mpsc;
 
 use super::Display;
@@ -9,8 +10,8 @@ pub fn neko(
     winszed: pty::Winszed,
     font_size: u8,
 ) {
-    let mut shell: pty::Neko =
-        pty::Neko::new(None, None, None, Some(winszed)).expect("neko");
+    let mut shell: pty::Neko<pty::Shell> =
+        pty::Neko::<pty::Shell>::new(None, None, None, Some(winszed)).expect("neko");
     /// Send a copy of master interface to write on the process' child.
     let _ = tx_master.send(*shell.get_speudo());
     drop(tx_master);
