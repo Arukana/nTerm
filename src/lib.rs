@@ -37,7 +37,6 @@ mod display;
 use std::io::Write;
 use std::path::PathBuf;
 use std::ops::Mul;
-use std::mem;
 use std::env;
 use std::thread;
 use std::sync::mpsc;
@@ -170,8 +169,9 @@ impl Iterator for Nterminal {
             Some(glutin::Event::Closed) => {
                 None
             },
-            Some(glutin::Event::ReceivedCharacter(code)) => unsafe {
-                self.speudo.write(&mem::transmute::<char, [u8; 4]>(code)).expect("transmutation");
+            Some(glutin::Event::ReceivedCharacter(code)) => {
+                let (buf, len) = pty::Key::from(code as u32).as_input();
+                let _ = self.speudo.write(&buf[..len]);
                 Some(())
             },
             Some(glutin::Event::Resized(x, y)) => unsafe {

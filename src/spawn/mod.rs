@@ -19,7 +19,7 @@ pub fn neko(
     let window_size: pty::Winszed = *shell.get_window_size();
     let mut width: usize = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize*2;
 
-    while let Some(event) = shell.next() {
+    while let Some(event) = <pty::Shell as Iterator>::next(&mut shell) {
         if let Some(window_size) = event.is_resized() {
             width = window_size.get_xpixel().checked_div(font_size as u32).unwrap_or_default() as usize*2;
         }
