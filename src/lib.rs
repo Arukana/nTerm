@@ -110,9 +110,6 @@ impl Nterminal {
             .join(SPEC_SUBD_NCF)
             .join(font_name);
         let text = gfx_text::new(factory).with_size(font_size).with_font(font.to_str().expect("font")).unwrap();
-        unsafe {
-            libc::write(0, b"ss".as_ptr() as *const libc::c_void, 2);
-        }
         Ok(Nterminal {
             window: window,
             device: device,
@@ -126,7 +123,6 @@ impl Nterminal {
         })
     }
 
-
     pub fn draw(&mut self) -> Option<()> {
         let ref mut text = self.text;
         let font_size: usize = self.font_size as usize;
@@ -134,25 +130,20 @@ impl Nterminal {
         if let Ok(screen) = self.receive.try_recv() {
             self.screen = screen;
             if self.screen.is_null() {
-                return None;
+                return None ;
             }
         }
         let ref screen = self.screen;
         screen.into_iter()
               .enumerate()
               .foreach(|(y, line):
-                        (usize, &[(pty::Character, pty::Character)])| {
+                        (usize, &[pty::Character])| {
                    line.into_iter()
                        .enumerate()
-                       .foreach(|(x, &(pty_character, character))| {
+                       .foreach(|(x, &pty_character)| {
                            let (ref glyph, [fg_r, fg_g, rg_b]) =
-                               if pty_character.is_space() {
-                                   (character.get_glyph().to_string(),
-                                    character.get_foreground())
-                               } else {
-                                   (pty_character.get_glyph().to_string(),
-                                    pty_character.get_foreground())
-                               };
+                               (pty_character.get_glyph().to_string(),
+                                pty_character.get_foreground());
                            text.add(glyph,
                                     [font_size.mul(&x) as i32/2,
                                      font_size.mul(&y) as i32],
