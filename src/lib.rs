@@ -15,7 +15,7 @@
     trivial_casts,
     trivial_numeric_casts,
     unused_import_braces,
-//    unused_qualifications
+    unused_qualifications
 )]
 
 extern crate neko;
@@ -36,7 +36,7 @@ mod display;
 
 use std::io::Write;
 use std::path::PathBuf;
-use std::ops::Mul;
+use std::ops::{Mul, Div};
 use std::env;
 use std::thread;
 use std::sync::mpsc;
@@ -72,6 +72,8 @@ pub struct Nterminal {
     screen: Display,
     /// The font size.
     font_size: u8,
+    focused: bool,
+    moved: [i32; 2],
 }
 
 impl Nterminal {
@@ -119,6 +121,8 @@ impl Nterminal {
             speudo: rx_master.recv().unwrap(),
             screen: rx_display.recv().unwrap(),
             receive: rx_display,
+            focused: false,
+            moved: [0; 2],
         })
     }
 
@@ -168,6 +172,28 @@ impl Iterator for Nterminal {
         match self.window.poll_events().next() {
             Some(glutin::Event::Closed) => {
                 None
+            },
+            Some(glutin::Event::Focused(focus)) => {
+                self.focused = focus;
+                Some(())
+            },
+            Some(glutin::Event::MouseMoved(x, y)) => {
+                self.moved = [x, y];
+                Some(())
+            },
+            Some(glutin::Event::MouseInput(pressed, code)) => {
+                let mouse: pty::Code = match code {
+                    glutin::MouseButton::Left => pty::Code::Left,
+                    glutin::MouseButton::Right => pty::Code::Right,
+                    glutin::MouseButton::Middle => pty::Code::Wheel,
+                    glutin::MouseButton::Other(code) => pty::Code::from(code),
+                };
+                let font_size: i32 = self.font_size as i32;
+                let [moved_x, moved_y]: [i32; 2] = self.moved;
+                let xy: [u16; 2] = [moved_x.mul(&2).div(&font_size) as u16, moved_y.div(&font_size) as u16];
+                let (buf, len) = pty::Mouse::from((mouse, pressed.eq(&glutin::ElementState::Pressed), xy)).as_input();
+                let _ = self.speudo.write(&buf[..len]);
+                Some(())
             },
             Some(glutin::Event::ReceivedCharacter(code)) => {
                 let (buf, len) = pty::Key::from(code as u32).as_input();
